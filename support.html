@@ -1,146 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support | RunningAir </title>
-    <style>
-        :root {
-            --primary-color: #007AFF; /* iOS Blue */
-            --text-color: #333;
-            --bg-color: #f5f5f7;
-            --card-bg: #ffffff;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        header p {
-            font-size: 1.2rem;
-            color: #666;
-        }
-        .faq-section {
-            margin-bottom: 40px;
-        }
-        .faq-card {
-            background: var(--card-bg);
-            padding: กัน;
-            margin-bottom: 15px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            padding: 25px;
-        }
-        .faq-card h2 {
-            font-size: 1.5rem;
-            margin-top: 0;
-            color: var(--primary-color);
-        }
-        .faq-item {
-            border-bottom: 1px solid #eee;
-            padding: bottom: 15px;
-            margin-bottom: 15px;
-        }
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-        .question {
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            display: block;
-        }
-        .answer {
-            color: #555;
-        }
-        .contact-card {
-            text-align: center;
-            background: var(--primary-color);
-            color: white;
-            padding: 40px;
-            border-radius: 12px;
-            margin-top: 50px;
-        }
-        .contact-card a {
-            color: white;
-            text-decoration: underline;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            font-size: 0.9rem;
-            color: #888;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - RunningAir</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
+    h1 { font-size: 1.8em; margin-top: 0.5em; }
+    h2 { font-size: 1.3em; margin-top: 1.5em; color: #555; border-bottom: 1px solid #eee; padding-bottom: 4px; }
+    a { color: #007AFF; }
+    ul { padding-left: 1.4em; }
+    li { margin-bottom: 0.4em; }
+    .section { margin-bottom: 2em; }
+    .badge { display: inline-block; background: #e8f5e9; color: #2e7d32; font-size: 0.85em; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+    .badge-free { background: #e3f2fd; color: #1565c0; }
+    .note { background: #f9f9f9; border-left: 3px solid #007AFF; padding: 12px 16px; margin: 1em 0; border-radius: 4px; }
+    .warn { background: #fff8e1; border-left: 3px solid #f9a825; padding: 12px 16px; margin: 1em 0; border-radius: 4px; }
+    table { width: 100%; border-collapse: collapse; margin: 1em 0; }
+    th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #eee; }
+    th { background: #f5f5f5; font-weight: 600; }
+    code { background: #f0f0f0; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+    .footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #eee; color: #999; font-size: 0.9em; }
+  </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <h1>RunningAir Support</h1>
-        <p>Everything you need to know about your running journey.</p>
-    </header>
+<h1>RunningAir — Support</h1>
+<p>Minimal 1Hz GPS running tracker for iOS. Fully offline. No account needed.</p>
 
-    <section class="faq-section">
-        <div class="faq-card">
-            <h2>Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <span class="question">How is my data stored?</span>
-                <div class="answer">
-                    Your running data is stored locally on your device using a secure SQLite database. We prioritize your privacy; your personal running history remains on your phone unless you explicitly export it.
-                </div>
-            </div>
+<div class="section">
+<h2>Features</h2>
+<table>
+  <tr><th>Feature</th><th>Availability</th></tr>
+  <tr><td>1Hz GPS run recording (start / pause / resume / stop)</td><td><span class="badge badge-free">Free</span></td></tr>
+  <tr><td>Real-time metrics — distance, pace, speed, moving time</td><td><span class="badge badge-free">Free</span></td></tr>
+  <tr><td>Run history with pagination, search, batch delete</td><td><span class="badge badge-free">Free</span> (up to 8 runs)</td></tr>
+  <tr><td>Run detail — elevation profile chart, route map</td><td><span class="badge badge-free">Free</span></td></tr>
+  <tr><td>Monthly statistics with drill-down</td><td><span class="badge badge-free">Free</span></td></tr>
+  <tr><td>Dynamic Island / Lock Screen Live Activity</td><td><span class="badge badge-free">Free</span></td></tr>
+  <tr><td>GPX 1.1 export &amp; share</td><td><span class="badge badge-free">Free</span></td></tr>
+  <tr><td>GPX / ZIP / SQLite database import</td><td><span class="badge badge-free">Free</span></td></tr>
+  <tr><td>AI running advice (on-device Core ML)</td><td><span class="badge">Member</span></td></tr>
+  <tr><td>Unlimited run storage (beyond 8 runs)</td><td><span class="badge">Member</span></td></tr>
+</table>
+</div>
 
-            <div class="faq-item">
-                <span class="question">Can I export my runs to other apps?</span>
-                <div class="answer">
-                    Yes! You can export your activities as GPX files through the app, making it easy to share your routes or import them into other fitness platforms.
-                </div>
-            </div>
+<div class="section">
+<h2>Membership Subscription</h2>
+<p>RunningAir offers an optional auto-renewable membership to unlock unlimited storage and AI analysis.</p>
+<table>
+  <tr><td>Product</td><td><code>com.vega.running.member</code></td></tr>
+  <tr><td>Price</td><td>$0.99 per 3 months</td></tr>
+  <tr><td>Free Trial</td><td>2 weeks (cancel anytime before trial ends and you won't be charged)</td></tr>
+  <tr><td>Payment</td><td>Processed by Apple via your App Store account</td></tr>
+  <tr><td>Auto-Renewal</td><td>Your subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period</td></tr>
+</table>
 
-            <div class="faq-item">
-                <span class="question">Why does my GPS accuracy vary?</span>
-                <div class="answer">
-                    GPS accuracy can be affected by tall buildings, heavy tree cover, or weather conditions. Our app uses advanced filtering algorithms to provide the most accurate path possible.
-                </div>
-            </div>
+<p><strong>Free Tier:</strong> You can store up to 8 finished runs. When you exceed this limit, the paywall will appear when starting a new run.</p>
 
-            <div class="faq-item">
-                <span class="question">I lost my data after an update. What should I do?</span>
-                <div class="answer">
-                    We design our updates to be seamless. However, if you encounter any issues during a version transition, please contact us immediately. We always recommend keeping regular backups via the export feature.
-                </div>
-            </div>
-        </div>
-    </section>
+<p><strong>Managing your subscription:</strong></p>
+<ul>
+  <li>Open the RunningAir app → tap the crown icon → <em>Manage Subscription</em></li>
+  <li>Or go to <strong>Settings → Apple Account → Subscriptions</strong> on your device</li>
+  <li>To cancel: turn off auto-renew in Settings before the current period ends</li>
+</ul>
 
-    <section class="contact-card">
-        <h2>Still have questions?</h2>
-        <p>We are here to help you hit your next personal best.</p>
-        <p>Email us at: <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
-    </section>
+<p><strong>Restore Purchases:</strong> If you've already subscribed on another device or after reinstalling, tap <em>Restore Purchases</em> on the paywall screen.</p>
 
-    <footer>
-        &copy; 2026 [RunningAir]. All rights reserved.
-    </footer>
+<p><strong>Legacy Users:</strong> If you previously purchased the one-time "Dynamic Island Pro" upgrade, your membership is automatically active — no subscription needed.</p>
+</div>
+
+<div class="section">
+<h2>Privacy</h2>
+<p>RunningAir is <strong>fully offline</strong> — your data never leaves your device. See the full <a href="index.html">Privacy Policy</a>.</p>
+<ul>
+  <li>No account, no sign-in, no servers</li>
+  <li>No analytics, no ads, no tracking</li>
+  <li>No HealthKit, no heart rate, no step count</li>
+  <li>All data stored locally in SQLite</li>
+  <li>Data is lost if you uninstall the app (no cloud backup)</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Frequently Asked Questions</h2>
+
+<h3>Why does the app need location permission?</h3>
+<p>RunningAir uses GPS to record your running route, distance, pace, and elevation. Location is only tracked during active recording sessions. A blue indicator appears in the status bar when GPS is active.</p>
+
+<h3>Does background location drain my battery?</h3>
+<p>Location updates only occur while you are recording a run. If you leave the app idle (not recording), no GPS data is collected and no battery is used for location.</p>
+
+<h3>What happens to my data if I delete the app?</h3>
+<p>All data is stored locally on your device. If you uninstall the app, your runs and data are permanently deleted. Use the <em>Export Database</em> feature (Settings → Export Database) to back up your data before uninstalling.</p>
+
+<h3>Can I transfer my data to a new iPhone?</h3>
+<p>Yes. Export your database from the old device (Settings → Export Database), send the <code>.sqlite</code> file to the new device, then import it in RunningAir (Import → select the <code>.sqlite</code> file).</p>
+
+<h3>Can I import runs from other apps?</h3>
+<p>RunningAir supports importing GPX files and ZIP archives containing GPX files from apps like FitoTrack, Garmin Connect, Strava (GPX export), and others. You can also import a previously exported RunningAir <code>.sqlite</code> database.</p>
+
+<h3>What AI analysis features are included?</h3>
+<p>On-device AI classifies each run into one of four categories:</p>
+<ul>
+  <li><strong style="color:#d32f2f;">Rest</strong> — recovery day recommended</li>
+  <li><strong style="color:#f57c00;">Easy</strong> — light recovery run</li>
+  <li><strong style="color:#1976d2;">Maintain</strong> — keep current training load</li>
+  <li><strong style="color:#388e3c;">Increase</strong> — ready to push harder</li>
+</ul>
+<p>Analysis uses pace, pace fade, pace variability, distance, duration, and elevation gain — processed entirely on your device via Core ML.</p>
+
+<h3>Does Live Activity work without a subscription?</h3>
+<p>Yes. The Dynamic Island and Lock Screen Live Activity is free for all users, including the free tier.</p>
+
+<h3>What does the elevation profile show?</h3>
+<p>The run detail page shows an interactive elevation chart along your route. Drag along the chart to see the elevation at any point. The chart uses GPS altitude data, which may be less accurate than barometric altimeter data.</p>
+
+<h3>Why is my pace sometimes inaccurate for imported GPX files?</h3>
+<p>If a GPX file doesn't include speed data, RunningAir computes speed from GPS coordinates using the Haversine formula. This can be slightly less accurate than native speed data, especially in areas with poor GPS reception or frequent turns.</p>
+</div>
+
+<div class="section">
+<h2>Known Limitations</h2>
+<ul>
+  <li>GPS accuracy depends on device hardware and environment (trees, buildings, tunnels). Horizontal accuracy threshold: 50 meters.</li>
+  <li>Altitude is derived from GPS, which is less accurate than barometric sensors. Consider this when reviewing elevation profiles.</li>
+  <li>The app does not integrate with Apple Health — run data is not synced to the Health app.</li>
+  <li>Free tier is limited to 8 stored runs. Export or delete runs to manage storage.</li>
+  <li>AI analysis is advisory only — always consult a medical professional for training decisions.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Contact</h2>
+<p>For questions, bug reports, or feature requests, email the developer:</p>
+<p><a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+</div>
+
+<div class="footer">
+  <p>RunningAir v1.2.0 &nbsp;|&nbsp; iOS 17.0+ &nbsp;|&nbsp; <a href="index.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a></p>
 </div>
 
 </body>
