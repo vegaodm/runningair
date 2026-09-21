@@ -41,6 +41,7 @@
   <tr><td>GPX 1.1 export &amp; share</td><td><span class="badge badge-free">Free</span></td></tr>
   <tr><td>GPX / ZIP / SQLite database import</td><td><span class="badge badge-free">Free</span></td></tr>
   <tr><td>AI running advice (on-device Core ML)</td><td><span class="badge">Member</span></td></tr>
+  <tr><td>Fatigue-aware advice &amp; run-list fatigue badge</td><td><span class="badge">Member</span></td></tr>
   <tr><td>Unlimited run storage (beyond 8 runs)</td><td><span class="badge">Member</span></td></tr>
 </table>
 </div>
@@ -77,6 +78,7 @@
   <li>No account, no sign-in, no servers</li>
   <li>No analytics, no ads, no tracking</li>
   <li>No HealthKit, no heart rate, no step count</li>
+  <li>Optional run ratings and training-context snapshots stay on your device</li>
   <li>All data stored locally in SQLite</li>
   <li>Data is lost if you uninstall the app (no cloud backup)</li>
 </ul>
@@ -108,7 +110,13 @@
   <li><strong style="color:#1976d2;">Maintain</strong> — keep current training load</li>
   <li><strong style="color:#388e3c;">Increase</strong> — ready to push harder</li>
 </ul>
-<p>Analysis uses pace, pace fade, pace variability, distance, duration, and elevation gain — processed entirely on your device via Core ML.</p>
+<p>Analysis uses pace, pace fade, pace variability, distance, duration, and elevation gain — processed entirely on your device via Core ML, and also takes your recent training frequency and load into account.</p>
+
+<h3>What is the fatigue warning?</h3>
+<p>Beyond a single run, the app looks at your trailing 7/28 days of training — distance, frequency, load, and consecutive run days — to spot fatigue. When it detects a heavy stretch, it shows an orange warning line in the run's advice card and a small triangle next to the run in your history list (orange = tired, red = overreached). It only ever makes the advice <em>more conservative</em> (for example, suggesting an easy or rest day), never more aggressive. All of this is computed on your device from your own runs.</p>
+
+<h3>How do I rate how a run felt?</h3>
+<p>Rating is optional. Open a run from your history and tap <em>Record how this run felt</em>, then choose the option that best matches your experience. You can change or clear it at any time from the same section. Your rating stays on your device and is used only as a personal reference alongside the app's own analysis — it does not change the advice category.</p>
 
 <h3>Does Live Activity work without a subscription?</h3>
 <p>Yes. The Dynamic Island and Lock Screen Live Activity is free for all users, including the free tier.</p>
@@ -138,7 +146,7 @@
 </div>
 
 <div class="footer">
-  <p>RunningAir v1.2.6 &nbsp;|&nbsp; iOS 17.0+ &nbsp;|&nbsp; <a href="index.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a></p>
+  <p>RunningAir v1.2.8 &nbsp;|&nbsp; iOS 17.0+ &nbsp;|&nbsp; <a href="index.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a></p>
 </div>
 
 </body>

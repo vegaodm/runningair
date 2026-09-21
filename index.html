@@ -18,7 +18,7 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="effective">Effective date: September 19, 2026 &nbsp;|&nbsp; Version 1.2.6</p>
+<p class="effective">Effective date: September 21, 2026 &nbsp;|&nbsp; Version 1.2.8</p>
 
 <p>This Privacy Policy applies to the RunningAir app for iOS ("the Application"), operated by BIN XIAO ("the Service Provider"). RunningAir is a <strong>fully offline</strong> GPS running tracker — it <strong>never</strong> transmits your data to any server, cloud service, or third party.</p>
 
@@ -27,6 +27,8 @@
 <ul>
   <li><strong>GPS location data</strong> — latitude, longitude, altitude, and speed, recorded at approximately 1-second intervals <em>only</em> while you are actively recording a run.</li>
   <li><strong>Run metadata</strong> — start time, end time, total distance, moving time, and pace, computed from the GPS data.</li>
+  <li><strong>Training context</strong> — rolling load, frequency, and fatigue indicators (e.g., 7/28-day distance, consecutive run days) derived on-device from your own runs to improve the advice shown for each run.</li>
+  <li><strong>Optional run rating</strong> — if you choose to rate how a run felt ("How You Felt"), that single subjective choice is stored locally on your device. It is entirely optional and is never required to use the app.</li>
   <li><strong>Subscription status</strong> — a boolean flag (member / non-member) stored locally via UserDefaults to unlock premium features. No payment information is stored in the app.</li>
 </ul>
 
@@ -39,6 +41,7 @@
 <ul>
   <li>Display your running route, distance, pace, and elevation on your device.</li>
   <li>Provide on-device AI analysis of your running patterns (using Core ML — no data leaves your phone).</li>
+  <li>Generate fatigue-aware training advice from your own run history, and use your optional "How You Felt" rating solely as a local, personal reference.</li>
   <li>Export runs as GPX files or back up your database, but only when <em>you</em> choose to share or export.</li>
 </ul>
 
