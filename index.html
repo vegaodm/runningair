@@ -13,9 +13,22 @@
     li { margin-bottom: 0.4em; }
     .effective { color: #888; font-size: 0.95em; }
     .note { background: #f9f9f9; border-left: 3px solid #007AFF; padding: 12px 16px; margin: 1em 0; border-radius: 4px; }
+    .lang-switch { border-bottom: 1px solid #eee; padding: 12px 0 8px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .lang { display: inline-block; padding: 4px 12px; border-radius: 16px; color: #555; text-decoration: none; font-size: 0.9em; border: 1px solid #ddd; }
+    .lang:hover { border-color: #007AFF; color: #007AFF; }
+    .lang.active { background: #007AFF; color: #fff; border-color: #007AFF; }
   </style>
 </head>
 <body>
+
+<nav class="lang-switch">
+  <a class="lang active" href="#en" data-lang="en">English</a>
+  <a class="lang" href="#zh" data-lang="zh">中文</a>
+  <a class="lang" href="#ja" data-lang="ja">日本語</a>
+  <a class="lang" href="#nl" data-lang="nl">Nederlands</a>
+</nav>
+
+<div id="en" class="lang-block" lang="en">
 
 <h1>Privacy Policy</h1>
 <p class="effective">Effective date: September 21, 2026 &nbsp;|&nbsp; Version 1.2.8</p>
@@ -101,6 +114,299 @@
 <p style="margin-top:2em; padding-top:1em; border-top:1px solid #eee; color:#999; font-size:0.9em;">
   <a href="support.html">Support &amp; FAQ</a> &nbsp;|&nbsp; <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a>
 </p>
+
+</div>
+
+<div id="zh" class="lang-block" lang="zh-Hans" style="display:none">
+
+<h1>隐私政策</h1>
+<p class="effective">生效日期：2026 年 9 月 21 日 &nbsp;|&nbsp; 版本 1.2.8</p>
+
+<p>本隐私政策适用于由 BIN XIAO（"服务提供方"）运营的 iOS 版 RunningAir 应用（"本应用"）。RunningAir 是一个<strong>完全离线</strong>的 GPS 跑步记录工具——它<strong>绝不会</strong>将你的数据发送到任何服务器、云服务或第三方。</p>
+
+<h2>我们收集的信息</h2>
+<p>RunningAir <strong>仅</strong>收集以下数据，且所有这些数据都保留在你的设备上：</p>
+<ul>
+  <li><strong>GPS 位置数据</strong>——纬度、经度、海拔和速度，<em>仅</em>在你主动记录跑步时以约 1 秒的间隔记录。</li>
+  <li><strong>跑步元数据</strong>——由 GPS 数据计算得出的开始时间、结束时间、总距离、移动时间和配速。</li>
+  <li><strong>训练背景信息</strong>——由你自己的跑步记录在设备端推导出的阶段性负荷、频率和疲劳指标（例如 7/28 天跑量、连续跑步天数），用于改进每次跑步所显示的建议。</li>
+  <li><strong>可选的跑步体感评分</strong>——如果你选择评价一次跑步的感受（"你的感受"），这一条主观选择只保存在你的设备本地。它完全可选，使用应用时绝不强制。</li>
+  <li><strong>订阅状态</strong>——通过 UserDefaults 在本地存储的布尔标志（会员 / 非会员），用于解锁高级功能。应用内不存储任何支付信息。</li>
+</ul>
+
+<div class="note">
+  <strong>我们绝不收集：</strong>你的姓名、邮箱、电话号码、健康/健身数据（HealthKit）、心率、步数、加速度计数据、广告标识符、设备分析数据、崩溃日志，或任何其他个人身份信息。
+</div>
+
+<h2>你的数据如何被使用</h2>
+<p>所有数据仅在应用内部用于：</p>
+<ul>
+  <li>在设备上显示你的跑步路线、距离、配速和海拔。</li>
+  <li>提供设备端 AI 跑步模式分析（使用 Core ML——数据不会离开你的手机）。</li>
+  <li>根据你自身的跑步历史生成关注疲劳的训练建议，并将你选填的"你的感受"评分仅作为本地个人参考。</li>
+  <li>以 GPX 文件导出跑步记录或备份数据库，但仅在你<em>主动</em>选择分享或导出时才进行。</li>
+</ul>
+
+<h2>数据存储</h2>
+<p>所有数据都以单个 SQLite 数据库文件（<code>Documents/running.sqlite</code>）存储在你 iOS 设备上的应用私有沙盒内。这些数据：</p>
+<ul>
+  <li><strong>不会上传</strong>到任何服务器或云服务。</li>
+  <li><strong>不会备份</strong>到 iCloud（本应用不使用 iCloud）。</li>
+  <li>如果你删除本应用，数据将<strong>永久丢失</strong>。</li>
+</ul>
+
+<h2>数据共享</h2>
+<p>RunningAir <strong>绝不出售、分享或传输</strong>你的数据给任何第三方。数据离开你设备的唯一途径是你主动发起的行为：</p>
+<ul>
+  <li><strong>GPX 导出</strong>——通过 iOS 分享面板分享跑步文件（隔空投送、信息、文件等）。</li>
+  <li><strong>SQLite 数据库导出</strong>——通过 iOS 分享面板导出备份文件。</li>
+</ul>
+
+<h2>应用内购买与订阅</h2>
+<p>RunningAir 提供可选的自动续费会员订阅（<code>com.vega.running.member</code>，每 3 个月 $0.99，含 2 周免费试用）。所有支付处理完全由 Apple 通过 App Store 完成。RunningAir <strong>不会</strong>接收、存储或处理任何支付卡信息、账单详情或 Apple ID 凭据。订阅状态通过 StoreKit 在本地验证。</p>
+
+<h2>第三方服务</h2>
+<p>RunningAir <strong>不使用</strong>任何第三方分析 SDK、广告网络、崩溃上报服务或跟踪技术。本应用不包含 Cookie、像素或其他类似的跟踪机制。</p>
+
+<h2>位置权限</h2>
+<p>RunningAir 会请求<strong>"使用期间"</strong>位置权限，以便在跑步会话期间记录你的 GPS 轨迹。已启用后台位置跟踪，以便你在跑步过程中切换应用时记录仍可继续。每当后台正在使用位置时，iOS 系统蓝色指示会出现在状态栏或灵动岛上。位置跟踪<strong>仅</strong>发生在主动记录期间，并在你结束跑步后立即停止。</p>
+
+<h2>儿童隐私</h2>
+<p>RunningAir 不面向 16 岁以下的儿童。服务提供方不会在知情的情况下收集儿童的个人信息。</p>
+
+<h2>国际数据传输</h2>
+<p>由于所有数据都保留在你的设备上，因此不存在国际数据传输。如果你导出并分享文件，传输与否完全由你自行决定。</p>
+
+<h2>你的权利</h2>
+<p>你有权：</p>
+<ul>
+  <li><strong>访问</strong>——通过浏览跑步列表或导出数据库，查看应用内存储的所有数据。</li>
+  <li><strong>删除</strong>——在应用内删除单次跑步或整个数据库，或卸载应用以移除所有数据。</li>
+  <li><strong>导出</strong>——随时将数据导出为 GPX 或 SQLite 文件。</li>
+</ul>
+
+<h2>加利福尼亚州隐私权（CCPA/CPRA）</h2>
+<p>如果您是加利福尼亚州居民，您有权知晓收集了哪些个人信息、有权删除个人信息、有权选择退出个人信息的出售或共享，并有权在行使这些权利时不受歧视。由于 RunningAir 不出售、不分享也不传输任何个人信息，这些权利天然得到尊重。若要行使任何权利，请联系服务提供方：<a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a>。</p>
+
+<h2>GDPR（欧洲用户）</h2>
+<p>如果您位于欧洲经济区（EEA），您的数据将完全在您的本地设备上处理。不会有任何个人数据被传输到服务器。您可以直接在应用内或通过联系服务提供方行使所有数据主体权利（访问、更正、删除、可携带权）。</p>
+
+<h2>安全</h2>
+<p>所有数据都存储在本应用的私有沙盒中，受 iOS 操作系统安全保护。由于没有数据通过网络传输，因此不存在传输过程中被截获的风险。</p>
+
+<h2>本政策的变更</h2>
+<p>服务提供方可能会不时更新本隐私政策。重大变更将随更新后的生效日期一起发布。当前版本始终可在本 URL 查看。</p>
+
+<h2>联系我们</h2>
+<p>如果你对本隐私政策有任何疑问，请联系服务提供方：<a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a>。</p>
+
+<p style="margin-top:2em; padding-top:1em; border-top:1px solid #eee; color:#999; font-size:0.9em;">
+  <a href="support.html">支持与常见问题</a> &nbsp;|&nbsp; <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">使用条款</a>
+</p>
+
+</div>
+
+<div id="ja" class="lang-block" lang="ja" style="display:none">
+
+<h1>プライバシーポリシー</h1>
+<p class="effective">発効日：2026年9月21日 &nbsp;|&nbsp; バージョン 1.2.8</p>
+
+<p>本プライバシーポリシーは、BIN XIAO（「サービス提供者」）が運営するiOS用のRunningAirアプリ（「本アプリ」）に適用されます。RunningAirは<strong>完全オフライン</strong>のGPSランニング記録アプリです。あなたのデータがサーバー、クラウドサービス、第三者に送信されることは<strong>一切</strong>ありません。</p>
+
+<h2>収集する情報</h2>
+<p>RunningAirが収集するのは<strong>以下のデータのみ</strong>で、すべてお使いのデバイス上にのみ残ります。</p>
+<ul>
+  <li><strong>GPS位置データ</strong>——ランニングを記録している間に限り、約1秒間隔で緯度・経度・標高・速度を記録します。</li>
+  <li><strong>ランニングメタデータ</strong>——GPSデータから算出される開始時刻・終了時刻・総距離・移動時間・ペース。</li>
+  <li><strong>トレーニングコンテキスト</strong>——あなた自身のランニング履歴からデバイス上で導出される負荷・頻度・疲労指標（7/28日間の走行距離、連続ランニング日数など）。ランのたびに表示されるアドバイスの改善に使用します。</li>
+  <li><strong>任意のラン評価</strong>——ランの体感を評価する（「体感」）場合、その単一の主観的な選択はデバイスローカルにのみ保存されます。完全に任意であり、アプリの利用に必須ではありません。</li>
+  <li><strong>購読ステータス</strong>——プレミアム機能を解除するためのブール値（メンバー／非メンバー）をUserDefaultsでローカルに保存します。支払い情報はアプリに一切保存されません。</li>
+</ul>
+
+<div class="note">
+  <strong>収集しないもの：</strong>氏名、メールアドレス、電話番号、健康／フィットネスデータ（HealthKit）、心拍数、歩数、加速度計データ、広告識別子、デバイス分析情報、クラッシュログ、その他個人を特定できる情報。
+</div>
+
+<h2>データの使用方法</h2>
+<p>すべてのデータは本アプリ内でのみ次の用途に使用されます。</p>
+<ul>
+  <li>お使いのデバイスで走行ルート・距離・ペース・標高を表示する。</li>
+  <li>デバイス上でランニングパターンをAI分析する（Core MLを使用。データが端末の外に出ることはありません）。</li>
+  <li>あなた自身の走行履歴から疲労に配慮したトレーニングアドバイスを生成し、任意の「体感」評価をローカルな個人参照としてのみ使用する。</li>
+  <li>ランのGPXファイルへのエクスポートやデータベースのバックアップ。ただし、あなたが<em>自分で</em>共有・エクスポートを選択した場合に限ります。</li>
+</ul>
+
+<h2>データの保存</h2>
+<p>すべてのデータは、お使いのiOSデバイス上の本アプリのプライベートサンドボックス内の単一のSQLiteデータベースファイル（<code>Documents/running.sqlite</code>）に保存されます。このデータは：</p>
+<ul>
+  <li>サーバーやクラウドサービスに<strong>アップロードされません</strong>。</li>
+  <li>iCloudには<strong>バックアップされません</strong>（本アプリはiCloudを使用しません）。</li>
+  <li>アプリを削除すると<strong>完全に失われます</strong>。</li>
+</ul>
+
+<h2>データの共有</h2>
+<p>RunningAirはあなたのデータを第三者に共有・販売・送信することは<strong>決して</strong>ありません。データがデバイスの外に出る唯一の方法は、あなた自身が行うアクションです。</p>
+<ul>
+  <li><strong>GPXエクスポート</strong>——iOSの共有シート（AirDrop、メッセージ、ファイルなど）でランファイルを共有する。</li>
+  <li><strong>SQLiteデータベースのエクスポート</strong>——共有シートでバックアップファイルをエクスポートする。</li>
+</ul>
+
+<h2>アプリ内課金と購読</h2>
+<p>RunningAirは任意の自動更新式メンバーシップ購読（<code>com.vega.running.member</code>、3ヶ月$0.99、2週間の無料トライアル）を提供します。すべての支払い処理はAppleがApp Storeを通じて完全に管理します。RunningAirは支払いカード情報、請求詳細、Apple IDの資格情報を<strong>一切</strong>受け取らず、保存も処理もしません。購読ステータスはStoreKitでローカルに検証されます。</p>
+
+<h2>第三者サービス</h2>
+<p>RunningAirは第三者提供の分析SDK、広告ネットワーク、クラッシュレポートサービス、トラッキング技術を<strong>一切</strong>使用していません。本アプリにはCookie、ピクセル、その他類似のトラッキング機構は含まれません。</p>
+
+<h2>位置情報の許可</h2>
+<p>RunningAirはランニングセッション中にGPSトラックを記録するため、<strong>「使用中」</strong>の位置情報許可を要求します。ランニング中に別のアプリへ切り替えても記録が続くよう、バックグラウンド位置情報が有効になっています。バックグラウンドで位置情報が使用中の場合、iOSの青色インジケーターがステータスバーまたはDynamic Islandに表示されます。位置情報トラッキングは<strong>記録中のみ</strong>行われ、ランを終了すると直ちに停止します。</p>
+
+<h2>子どものプライバシー</h2>
+<p>RunningAirは16歳未満の子どもを対象としていません。サービス提供者は子どもの個人情報を故意に収集することはありません。</p>
+
+<h2>国際的なデータ転送</h2>
+<p>すべてのデータはデバイス上に保持されるため、国際的な転送は行われません。ファイルをエクスポートして共有する場合も、転送は完全にあなたの判断によるものです。</p>
+
+<h2>あなたの権利</h2>
+<p>あなたには以下の権利があります。</p>
+<ul>
+  <li><strong>アクセス</strong>——ランニングリストを閲覧したりデータベースをエクスポートしたりして、アプリ内のすべてのデータを確認できます。</li>
+  <li><strong>削除</strong>——アプリ内で個々のランやデータベース全体を削除するか、アプリをアンインストールしてすべてのデータを削除できます。</li>
+  <li><strong>エクスポート</strong>——いつでもGPXまたはSQLiteファイルとしてデータをエクスポートできます。</li>
+</ul>
+
+<h2>カリフォルニア州のプライバシー権（CCPA/CPRA）</h2>
+<p>カリフォルニア州にお住まいの場合、収集される個人情報を知る権利、個人情報を削除する権利、個人情報の販売・共有を拒否する権利、これらの権利を行使したことで差別されない権利があります。RunningAirは個人情報を販売・共有・送信しないため、これらの権利は元々、自然に尊重されています。権利を行使するには、<a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a> までサービス提供者にご連絡ください。</p>
+
+<h2>GDPR（欧州のユーザー）</h2>
+<p>欧州経済領域（EEA）にお住まいの場合、あなたのデータはすべてローカルデバイス上で処理されます。個人データがサーバーに転送されることはありません。データ主体の権利（アクセス、訂正、消去、ポータビリティ）はすべてアプリ内またはサービス提供者への連絡により行使できます。</p>
+
+<h2>セキュリティ</h2>
+<p>すべてのデータは本アプリのプライベートサンドボックスに保存され、iOSオペレーティングシステムのセキュリティで保護されています。ネットワーク経由でデータが送信されることはないため、送信中に傍受されるリスクはありません。</p>
+
+<h2>本ポリシーの変更</h2>
+<p>サービス提供者は本プライバシーポリシーを随時更新する場合があります。重要な変更は更新された発効日とともに掲載されます。最新版は常にこのURLで閲覧できます。</p>
+
+<h2>連絡先</h2>
+<p>本プライバシーポリシーについてご質問がある場合は、<a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a> までサービス提供者にご連絡ください。</p>
+
+<p style="margin-top:2em; padding-top:1em; border-top:1px solid #eee; color:#999; font-size:0.9em;">
+  <a href="support.html">サポートとFAQ</a> &nbsp;|&nbsp; <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">利用規約</a>
+</p>
+
+</div>
+
+<div id="nl" class="lang-block" lang="nl" style="display:none">
+
+<h1>Privacybeleid</h1>
+<p class="effective">Ingangsdatum: 21 september 2026 &nbsp;|&nbsp; Versie 1.2.8</p>
+
+<p>Dit privacybeleid is van toepassing op de RunningAir-app voor iOS ("de Applicatie"), beheerd door BIN XIAO ("de Dienstverlener"). RunningAir is een <strong>volledig offline</strong> GPS-renlogger — uw gegevens worden <strong>nooit</strong> naar een server, cloudservice of derde partij verzonden.</p>
+
+<h2>Welke gegevens we verzamelen</h2>
+<p>RunningAir verzamelt <strong>uitsluitend</strong> de volgende gegevens, die volledig op uw apparaat blijven:</p>
+<ul>
+  <li><strong>GPS-locatiegegevens</strong> — breedtegraad, lengtegraad, hoogte en snelheid, uitsluitend opgenomen in intervallen van circa 1 seconde terwijl u actief een run opneemt.</li>
+  <li><strong>Runmetagegevens</strong> — starttijd, eindtijd, totale afstand, bewegingstijd en tempo, berekend uit de GPS-gegevens.</li>
+  <li><strong>Trainingscontext</strong> — voortschrijdende belasting, frequentie en vermoeidheidsindicatoren (bijv. 7/28-daagse afstand, opeenvolgende hardloopdagen) die op het apparaat uit uw eigen runs worden afgeleid om het advies per run te verbeteren.</li>
+  <li><strong>Optionele runbeoordeling</strong> — als u kiest om te beoordelen hoe een run voelde ("Hoe voelde de run"), wordt die ene subjectieve keuze lokaal op uw apparaat opgeslagen. Het is volledig optioneel en nooit vereist om de app te gebruiken.</li>
+  <li><strong>Abonnementsstatus</strong> — een booleaanse vlag (lid / niet-lid) die lokaal via UserDefaults wordt opgeslagen om premiumfuncties te ontgrendelen. Er wordt geen betaalinformatie in de app opgeslagen.</li>
+</ul>
+
+<div class="note">
+  <strong>We verzamelen GEEN:</strong> uw naam, e-mailadres, telefoonnummer, gezondheids-/fitnessgegevens (HealthKit), hartslag, aantal stappen, accelerometergegevens, advertentie-id's, apparaatanalyses, crashlogs of enige andere persoonlijk identificeerbare informatie.
+</div>
+
+<h2>Hoe uw gegevens worden gebruikt</h2>
+<p>Alle gegevens worden uitsluitend binnen de Applicatie gebruikt om:</p>
+<ul>
+  <li>uw hardlooproute, afstand, tempo en hoogte op uw apparaat weer te geven.</li>
+  <li>AI-analyse van uw hardlooppatronen op het apparaat te bieden (via Core ML — er verlaten geen gegevens uw telefoon).</li>
+  <li>op vermoeidheid gebaseerd trainingsadvies te genereren uit uw eigen rungeschiedenis, en uw optionele "Hoe voelde de run"-beoordeling uitsluitend als lokale, persoonlijke referentie te gebruiken.</li>
+  <li>runs te exporteren als GPX-bestanden of uw database te back-uppen, maar uitsluitend wanneer u er<em> zelf</em> voor kiest om te delen of te exporteren.</li>
+</ul>
+
+<h2>Gegevensopslag</h2>
+<p>Alle gegevens worden lokaal opgeslagen in één SQLite-databasebestand (<code>Documents/running.sqlite</code>) in de privésandbox van de Applicatie op uw iOS-apparaat. Deze gegevens worden:</p>
+<ul>
+  <li><strong>niet geüpload</strong> naar een server of cloudservice.</li>
+  <li><strong>niet in iCloud geback-upt</strong> (de app gebruikt geen iCloud).</li>
+  <li><strong>permanent verloren</strong> als u de Applicatie van uw apparaat verwijdert.</li>
+</ul>
+
+<h2>Gegevens delen</h2>
+<p>RunningAir <strong>deelt, verkoopt of verzendt</strong> uw gegevens <strong>nooit</strong> aan derden. De enige manieren waarop gegevens uw apparaat kunnen verlaten zijn acties die u zelf start:</p>
+<ul>
+  <li><strong>GPX-export</strong> — een runbestand delen via het iOS-deelblad (AirDrop, Berichten, Bestanden, enz.).</li>
+  <li><strong>SQLite-database-export</strong> — een back-upbestand exporteren via het iOS-deelblad.</li>
+</ul>
+
+<h2>In-app-aankopen en abonnementen</h2>
+<p>RunningAir biedt een optioneel automatisch verlengbaar lidmaatschap (<code>com.vega.running.member</code>, $0,99 / 3 maanden, met een gratis proefperiode van 2 weken). Alle betalingsverwerking wordt volledig door Apple via de App Store afgehandeld. RunningAir ontvangt, slaat of verwerkt <strong>geen</strong> betalingskaartgegevens, factuurgegevens of Apple ID-referenties. De abonnementsstatus wordt lokaal via StoreKit geverifieerd.</p>
+
+<h2>Diensten van derden</h2>
+<p>RunningAir gebruikt <strong>geen</strong> analyses-SDK's van derden, advertentienetwerken, crashrapportagediensten of trackingtechnologieën. De Applicatie bevat geen cookies, pixels of vergelijkbare trackingmechanismen.</p>
+
+<h2>Locatietoestemming</h2>
+<p>RunningAir vraagt locatietoestemming voor <strong>"tijdens gebruik"</strong> om uw GPS-track tijdens een actieve runsessie op te nemen. Locatie op de achtergrond is ingeschakeld zodat de opname doorgaat als u midden in een run van app wisselt. Er verschijnt een blauwe systeemindicator (iOS) in de statusbalk of Dynamic Island wanneer locatie actief op de achtergrond wordt gebruikt. Locatietracking vindt <strong>uitsluitend</strong> plaats tijdens actieve opnamesessies en stopt onmiddellijk wanneer u een run beëindigt.</p>
+
+<h2>Privacy van kinderen</h2>
+<p>RunningAir is niet gericht op kinderen jonger dan 16 jaar. De Dienstverlener verzamelt niet bewust persoonlijke informatie van kinderen.</p>
+
+<h2>Internationale gegevensoverdracht</h2>
+<p>Er worden geen gegevens internationaal overgedragen, omdat alle gegevens op uw apparaat blijven. Als u een bestand exporteert en deelt, is de overdracht geheel naar uw eigen inzicht.</p>
+
+<h2>Uw rechten</h2>
+<p>U heeft het recht om:</p>
+<ul>
+  <li><strong>Toegang</strong> — alle in de app opgeslagen gegevens te bekijken door de runlijst te bekijken of de database te exporteren.</li>
+  <li><strong>Verwijderen</strong> — individuele runs of de hele database in de app te verwijderen, of de app te verwijderen om alle gegevens te wissen.</li>
+  <li><strong>Exporteren</strong> — uw gegevens op elk moment te exporteren als GPX- of SQLite-bestanden.</li>
+</ul>
+
+<h2>Privacyrechten van Californië (CCPA/CPRA)</h2>
+<p>Als u in Californië woont, heeft u het recht te weten welke persoonlijke informatie wordt verzameld, het recht om persoonlijke informatie te verwijderen, het recht om u af te melden voor de verkoop of het delen van persoonlijke informatie, en het recht op non-discriminatie bij het uitoefenen van deze rechten. Omdat RunningAir geen persoonlijke informatie verkoopt, deelt of verzendt, worden deze rechten inherent gerespecteerd. Neem contact op met de Dienstverlener via <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a> om rechten uit te oefenen.</p>
+
+<h2>AVG (Europese gebruikers)</h2>
+<p>Als u in de Europese Economische Ruimte (EER) woont, worden uw gegevens volledig op uw lokale apparaat verwerkt. Er worden geen persoonlijke gegevens naar een server verzonden. U kunt alle rechten van betrokkenen (inzage, rectificatie, wissen, overdraagbaarheid) rechtstreeks in de app of via de Dienstverlener uitoefenen.</p>
+
+<h2>Beveiliging</h2>
+<p>Alle gegevens worden opgeslagen in de privésandbox van de Applicatie, beveiligd door de beveiliging van het iOS-besturingssysteem. Er worden geen gegevens via het netwerk verzonden, dus er is geen risico op onderschepping tijdens verzending.</p>
+
+<h2>Wijzigingen in dit beleid</h2>
+<p>De Dienstverlener kan dit privacybeleid van tijd tot tijd bijwerken. Belangrijke wijzigingen worden gepubliceerd met een bijgewerkte ingangsdatum. De huidige versie is altijd beschikbaar op deze URL.</p>
+
+<h2>Contact</h2>
+<p>Als u vragen heeft over dit privacybeleid, neem dan contact op met de Dienstverlener via <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a>.</p>
+
+<p style="margin-top:2em; padding-top:1em; border-top:1px solid #eee; color:#999; font-size:0.9em;">
+  <a href="support.html">Ondersteuning en FAQ</a> &nbsp;|&nbsp; <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Gebruiksvoorwaarden</a>
+</p>
+
+</div>
+
+<script>
+  (function () {
+    var nav = document.querySelector('.lang-switch');
+    if (!nav) return;
+    nav.addEventListener('click', function (e) {
+      var link = e.target.closest('.lang');
+      if (!link) return;
+      e.preventDefault();
+      showLang(link.getAttribute('data-lang'));
+      history.replaceState(null, '', '#' + link.getAttribute('data-lang'));
+    });
+    function showLang(lang) {
+      document.querySelectorAll('.lang-block').forEach(function (block) {
+        block.style.display = block.id === lang ? 'block' : 'none';
+      });
+      document.querySelectorAll('.lang').forEach(function (x) {
+        x.classList.toggle('active', x.getAttribute('data-lang') === lang);
+      });
+    }
+    var initial = location.hash.replace('#', '');
+    if (initial && document.getElementById(initial)) showLang(initial);
+  })();
+</script>
 
 </body>
 </html>

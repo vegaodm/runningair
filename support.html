@@ -21,9 +21,22 @@
     th { background: #f5f5f5; font-weight: 600; }
     code { background: #f0f0f0; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
     .footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #eee; color: #999; font-size: 0.9em; }
+    .lang-switch { border-bottom: 1px solid #eee; padding: 12px 0 8px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .lang { display: inline-block; padding: 4px 12px; border-radius: 16px; color: #555; text-decoration: none; font-size: 0.9em; border: 1px solid #ddd; }
+    .lang:hover { border-color: #007AFF; color: #007AFF; }
+    .lang.active { background: #007AFF; color: #fff; border-color: #007AFF; }
   </style>
 </head>
 <body>
+
+<nav class="lang-switch">
+  <a class="lang active" href="#en" data-lang="en">English</a>
+  <a class="lang" href="#zh" data-lang="zh">中文</a>
+  <a class="lang" href="#ja" data-lang="ja">日本語</a>
+  <a class="lang" href="#nl" data-lang="nl">Nederlands</a>
+</nav>
+
+<div id="en" class="lang-block" lang="en">
 
 <h1>RunningAir — Support</h1>
 <p>Minimal 1Hz GPS running tracker for iOS. Fully offline. No account needed.</p>
@@ -148,6 +161,416 @@
 <div class="footer">
   <p>RunningAir v1.2.8 &nbsp;|&nbsp; iOS 17.0+ &nbsp;|&nbsp; <a href="index.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a></p>
 </div>
+
+</div>
+
+<div id="zh" class="lang-block" lang="zh-Hans" style="display:none">
+
+<h1>RunningAir — 支持</h1>
+<p>专为 iOS 设计的极简 1Hz GPS 跑步记录应用。完全离线。无需账号。</p>
+
+<div class="section">
+<h2>功能</h2>
+<table>
+  <tr><th>功能</th><th>可用性</th></tr>
+  <tr><td>1Hz GPS 跑步记录（开始 / 暂停 / 继续 / 结束）</td><td><span class="badge badge-free">免费</span></td></tr>
+  <tr><td>实时指标——距离、配速、速度、移动时间</td><td><span class="badge badge-free">免费</span></td></tr>
+  <tr><td>跑步历史（分页、搜索、批量删除）</td><td><span class="badge badge-free">免费</span>（最多 8 次跑步）</td></tr>
+  <tr><td>跑步详情——海拔剖面图、路线地图</td><td><span class="badge badge-free">免费</span></td></tr>
+  <tr><td>月度统计——可下钻的跑步日历</td><td><span class="badge badge-free">免费</span></td></tr>
+  <tr><td>灵动岛 / 锁屏实时活动</td><td><span class="badge badge-free">免费</span></td></tr>
+  <tr><td>GPX 1.1 导出与分享</td><td><span class="badge badge-free">免费</span></td></tr>
+  <tr><td>GPX / ZIP / SQLite 数据库导入</td><td><span class="badge badge-free">免费</span></td></tr>
+  <tr><td>AI 跑步建议（设备端 Core ML）</td><td><span class="badge">会员</span></td></tr>
+  <tr><td>关注疲劳的建议与跑步列表疲劳徽章</td><td><span class="badge">会员</span></td></tr>
+  <tr><td>无限跑步存储（超过 8 次）</td><td><span class="badge">会员</span></td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>会员订阅</h2>
+<p>RunningAir 提供可选的自动续费会员，用于解锁无限存储和 AI 分析。</p>
+<table>
+  <tr><td>产品</td><td><code>com.vega.running.member</code></td></tr>
+  <tr><td>价格</td><td>每 3 个月 $0.99</td></tr>
+  <tr><td>免费试用</td><td>2 周（试用结束前可随时取消，不会被收费）</td></tr>
+  <tr><td>支付</td><td>由 Apple 通过你的 App Store 账户处理</td></tr>
+  <tr><td>自动续订</td><td>除非在当前周期结束前至少 24 小时关闭自动续订，否则订阅将自动续期</td></tr>
+</table>
+
+<p><strong>免费档：</strong>你可以存储最多 8 次完成的跑步。超出上限时，开始新跑步或导入包含超过 8 次跑步的数据库时会出现付费墙（导入的 GPX/ZIP 文件以剩余免费额度为上限）。</p>
+
+<p><strong>管理订阅：</strong></p>
+<ul>
+  <li>打开 RunningAir 应用 → 点击皇冠图标 → <em>管理订阅</em></li>
+  <li>或前往设备上的<strong>设置 → Apple 账户 → 订阅</strong></li>
+  <li>取消：在当前周期结束前于设置中关闭自动续订</li>
+</ul>
+
+<p><strong>恢复购买：</strong>如果你已在另一台设备上订阅，或重装应用后需要恢复，请在付费页点击<em>恢复购买</em>。</p>
+
+<p><strong>旧版用户：</strong>如果你以前购买过一次性的"灵动岛 Pro"升级，你的会员会自动生效，无需订阅。</p>
+</div>
+
+<div class="section">
+<h2>隐私</h2>
+<p>RunningAir <strong>完全离线</strong>——你的数据绝不会离开你的设备。完整内容请参阅<a href="index.html">隐私政策</a>。</p>
+<ul>
+  <li>无账号、无需登录、无服务器</li>
+  <li>无分析、无广告、无跟踪</li>
+  <li>无 HealthKit、无心率、无计步</li>
+  <li>可选的跑步体感评分与训练背景快照仅保存在设备上</li>
+  <li>所有数据本地存储于 SQLite</li>
+  <li>卸载应用后数据即丢失（无云端备份）</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>常见问题</h2>
+
+<h3>为什么应用需要位置权限？</h3>
+<p>RunningAir 使用 GPS 记录你的跑步路线、距离、配速和海拔。仅在主动记录期间跟踪位置。GPS 活跃时状态栏会出现蓝色指示。</p>
+
+<h3>后台定位会耗电吗？</h3>
+<p>只有在记录跑步时才会进行位置更新。如果你让应用闲置（未在记录），不会收集任何 GPS 数据，也不会因定位消耗电量。</p>
+
+<h3>删除应用后我的数据会怎样？</h3>
+<p>所有数据都存储在设备本地。卸载应用后，你的跑步记录和数据将被永久删除。请在卸载前使用<em>导出数据库</em>功能（设置 → 导出数据库）备份数据。</p>
+
+<h3>我可以把数据转移到新 iPhone 吗？</h3>
+<p>可以。从旧设备导出数据库（设置 → 导出数据库），将 <code>.sqlite</code> 文件发送到新设备，然后在 RunningAir 中导入（导入 → 选择 <code>.sqlite</code> 文件）。</p>
+
+<h3>我可以从其他应用导入跑步记录吗？</h3>
+<p>RunningAir 支持导入 GPX 文件及包含 GPX 文件的 ZIP 压缩包，例如来自 FitoTrack、Garmin Connect、Strava（GPX 导出）等应用的数据。你也可以导入之前导出的 RunningAir <code>.sqlite</code> 数据库。</p>
+
+<h3>包含哪些 AI 分析功能？</h3>
+<p>设备端 AI 会将每次跑步分为以下四类之一：</p>
+<ul>
+  <li><strong style="color:#d32f2f;">休息</strong>——建议恢复日</li>
+  <li><strong style="color:#f57c00;">轻松</strong>——轻度恢复跑</li>
+  <li><strong style="color:#1976d2;">维持</strong>——保持当前训练负荷</li>
+  <li><strong style="color:#388e3c;">增加</strong>——可以加强训练</li>
+</ul>
+<p>分析使用配速、配速下降、配速波动、距离、时长和爬升数据——完全通过 Core ML 在你的设备上处理，并会考虑你近期的训练频率与负荷。</p>
+
+<h3>疲劳警告是什么？</h3>
+<p>除了单次跑步之外，应用还会查看你过去 7/28 天的训练情况——距离、频率、负荷和连续跑步天数——以发现疲劳迹象。检测到高强度训练段时，会在该次跑步的建议卡片上显示橙色警告行，并在历史列表中该次跑步旁显示小三角（橙色 = 疲惫，红色 = 过度训练）。它只会让建议变得<em>更保守</em>（例如建议轻松跑或休息日），绝不会更激进。这一切都在设备上根据你自己的跑步记录计算。</p>
+
+<h3>如何评价跑步感受？</h3>
+<p>评分是可选的。从历史记录中打开一次跑步，点击<em>记录这次跑步的感受</em>，然后选择最符合你体验的选项。你可以随时在同一区域修改或清除。评分保留在设备上，仅作为应用自身分析之外的个人参考——不会改变建议类别。</p>
+
+<h3>没有订阅也能使用实时活动吗？</h3>
+<p>可以。灵动岛和锁屏实时活动对所有用户免费，包括免费档用户。</p>
+
+<h3>海拔剖面图显示什么？</h3>
+<p>跑步详情页会显示沿路线的交互式海拔图表。沿图表拖动可查看任意一点的海拔。图表使用 GPS 海拔数据，其精度可能不如气压式高度计数据。</p>
+
+<h3>为什么导入的 GPX 文件配速有时不准？</h3>
+<p>如果 GPX 文件不包含速度数据，RunningAir 会使用半正矢公式（Haversine）根据 GPS 坐标计算速度。这在精度上可能略逊于原生速度数据，尤其是在 GPS 信号差或转弯频繁的区域。</p>
+</div>
+
+<div class="section">
+<h2>已知限制</h2>
+<ul>
+  <li>GPS 精度取决于设备硬件和环境（树木、建筑物、隧道）。水平精度阈值：50 米。</li>
+  <li>海拔由 GPS 推导，精度不如气压传感器。查看海拔剖面图时请酌情考虑。</li>
+  <li>应用未与 Apple 健康集成——跑步数据不会同步到健康应用。</li>
+  <li>免费档限制为存储 8 次跑步。可导出或删除跑步来管理存储空间。</li>
+  <li>AI 分析仅供参考——训练决策请务必咨询医疗专业人士。</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>联系</h2>
+<p>如有问题、Bug 报告或功能请求，请发送邮件给开发者：</p>
+<p><a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+</div>
+
+<div class="footer">
+  <p>RunningAir v1.2.8 &nbsp;|&nbsp; iOS 17.0+ &nbsp;|&nbsp; <a href="index.html">隐私政策</a> &nbsp;|&nbsp; <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">使用条款</a></p>
+</div>
+
+</div>
+
+<div id="ja" class="lang-block" lang="ja" style="display:none">
+
+<h1>RunningAir — サポート</h1>
+<p>iOS向けのミニマルな1Hz GPSランニング記録アプリ。完全オフライン。アカウント不要。</p>
+
+<div class="section">
+<h2>機能</h2>
+<table>
+  <tr><th>機能</th><th>利用可否</th></tr>
+  <tr><td>1Hz GPSランニング記録（開始 / 一時停止 / 再開 / 停止）</td><td><span class="badge badge-free">無料</span></td></tr>
+  <tr><td>リアルタイム指標——距離・ペース・速度・移動時間</td><td><span class="badge badge-free">無料</span></td></tr>
+  <tr><td>ランニング履歴（ページング・検索・一括削除）</td><td><span class="badge badge-free">無料</span>（最大8回）</td></tr>
+  <tr><td>ランの詳細——標高プロファイルのグラフ、ルートマップ</td><td><span class="badge badge-free">無料</span></td></tr>
+  <tr><td>月間統計——ドリルダウン対応のランニングカレンダー</td><td><span class="badge badge-free">無料</span></td></tr>
+  <tr><td>Dynamic Island / ロック画面のライブアクティビティ</td><td><span class="badge badge-free">無料</span></td></tr>
+  <tr><td>GPX 1.1 エクスポート＆共有</td><td><span class="badge badge-free">無料</span></td></tr>
+  <tr><td>GPX / ZIP / SQLite データベースのインポート</td><td><span class="badge badge-free">無料</span></td></tr>
+  <tr><td>AIランニングアドバイス（デバイス上で動作するCore ML）</td><td><span class="badge">メンバー</span></td></tr>
+  <tr><td>疲労に配慮したアドバイス＆ランニング一覧の疲労バッジ</td><td><span class="badge">メンバー</span></td></tr>
+  <tr><td>無制限のラン保存（8回を超える場合）</td><td><span class="badge">メンバー</span></td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>メンバーシップ購読</h2>
+<p>RunningAirは、無制限の保存容量とAI分析を解除する、任意の自動更新式メンバーシップを提供します。</p>
+<table>
+  <tr><td>製品</td><td><code>com.vega.running.member</code></td></tr>
+  <tr><td>価格</td><td>3ヶ月で$0.99</td></tr>
+  <tr><td>無料トライアル</td><td>2週間（トライアル終了前ならいつでもキャンセル可能、請求されません）</td></tr>
+  <tr><td>支払い</td><td>Appleがお客様のApp Storeアカウントを通じて処理します</td></tr>
+  <tr><td>自動更新</td><td>現在の期間の終了の少なくとも24時間前までに自動更新をオフにしない限り、購読は自動的に更新されます</td></tr>
+</table>
+
+<p><strong>無料プラン：</strong>完了したランを最大8回保存できます。この上限を超えると、新しいランを開始するとき、または8回を超えるランの含まれるデータベースをインポートするときにPaywallが表示されます（インポートするGPX/ZIPファイルは残りの無料枠が上限となります）。</p>
+
+<p><strong>購読の管理：</strong></p>
+<ul>
+  <li>RunningAirアプリを開く → クラウンアイコンをタップ → <em>購読を管理</em></li>
+  <li>またはデバイスの<strong>設定 → Appleアカウント → 購読</strong>に進む</li>
+  <li>キャンセルするには：現在の期間が終了する前に設定で自動更新をオフにする</li>
+</ul>
+
+<p><strong>購入の復元：</strong>別のデバイスで登録済みの場合や再インストール後は、Paywall画面で<em>購入を復元</em>をタップしてください。</p>
+
+<p><strong>旧バージョンのユーザー：</strong>以前に一度きりの「Dynamic Island Pro」アップグレードを購入した場合、メンバーシップは自動的に有効になります。購読は不要です。</p>
+</div>
+
+<div class="section">
+<h2>プライバシー</h2>
+<p>RunningAirは<strong>完全オフライン</strong>です。あなたのデータがデバイスの外に出ることはありません。詳細は<a href="index.html">プライバシーポリシー</a>をご覧ください。</p>
+<ul>
+  <li>アカウント不要、ログイン不要、サーバーなし</li>
+  <li>分析なし、広告なし、トラッキングなし</li>
+  <li>HealthKitなし、心拍数なし、歩数なし</li>
+  <li>任意のラン評価とトレーニングコンテキストのスナップショットはデバイス上にのみ保存</li>
+  <li>すべてのデータはSQLiteにローカル保存</li>
+  <li>アプリをアンインストールするとデータは失われます（クラウドバックアップなし）</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>よくある質問（FAQ）</h2>
+
+<h3>アプリが位置情報の許可を求めるのはなぜですか？</h3>
+<p>RunningAirは走行ルート、距離、ペース、標高を記録するためにGPSを使用します。位置情報の追跡はアクティブな記録中のみ行われます。GPS使用中はステータスバーに青色のインジケーターが表示されます。</p>
+
+<h3>バックグラウンドの位置情報はバッテリーを消費しますか？</h3>
+<p>位置情報の更新は、ランニングを記録している間のみ行われます。アプリをアイドル状態（記録していない状態）にしておけば、GPSデータは収集されず、位置情報によるバッテリー消費もありません。</p>
+
+<h3>アプリを削除するとデータはどうなりますか？</h3>
+<p>すべてのデータはデバイス上にローカル保存されています。アプリをアンインストールすると、ランニング記録とデータは完全に削除されます。アンインストールする前に、<em>データベースを書き出す</em>機能（設定 → データベースを書き出す）でバックアップしてください。</p>
+
+<h3>新しいiPhoneにデータを移行できますか？</h3>
+<p>できます。古いデバイスからデータベースを書き出し（設定 → データベースを書き出す）、<code>.sqlite</code>ファイルを新しいデバイスに送り、RunningAirでインポートします（インポート → <code>.sqlite</code>ファイルを選択）。</p>
+
+<h3>他のアプリからランをインポートできますか？</h3>
+<p>RunningAirは、FitoTrack、Garmin Connect、Strava（GPX書き出し）などのアプリのGPXファイルやGPXファイルを含むZIPアーカイブのインポートに対応しています。以前に書き出したRunningAirの<code>.sqlite</code>データベースもインポートできます。</p>
+
+<h3>AI分析機能には何が含まれていますか？</h3>
+<p>デバイス上のAIが各ランを次の4つのカテゴリのいずれかに分類します。</p>
+<ul>
+  <li><strong style="color:#d32f2f;">休養（Rest）</strong>——回復日を推奨</li>
+  <li><strong style="color:#f57c00;">軽め（Easy）</strong>——軽い回復ラン</li>
+  <li><strong style="color:#1976d2;">維持（Maintain）</strong>——現在のトレーニング負荷を維持</li>
+  <li><strong style="color:#388e3c;">増加（Increase）</strong>——より強度を上げる準備ができている</li>
+</ul>
+<p>分析はペース、ペース低下、ペース変動、距離、時間、累積標高を使用します。すべてCore MLでデバイス上で処理され、直近のトレーニング頻度と負荷も考慮されます。</p>
+
+<h3>疲労警告とは何ですか？</h3>
+<p>単一のランを超えて、アプリは過去7/28日間のトレーニング——距離、頻度、負荷、連続ランニング日数——を確認して疲労を検出します。高強度の期間を検出すると、ランのアドバイスカードにオレンジ色の警告行が表示され、履歴リストの該当ランの横に小さな三角形が表示されます（オレンジ = 疲労、赤 = オーバーリーチ）。アドバイスが<em>より保守的になる</em>だけです（たとえば軽めのランや休養日を提案するなど）。より積極的になることはありません。これらはすべて、あなた自身のランニングからデバイス上で計算されます。</p>
+
+<h3>ランの体感を評価するにはどうすればいいですか？</h3>
+<p>評価は任意です。履歴からランを開き、<em>このランの体感を記録</em>をタップして、体験に最も合う選択肢を選んでください。同じ場所からいつでも変更・削除できます。評価はデバイス上に残り、アプリ自身の分析と並ぶ個人的な参考としてのみ使用され、アドバイスのカテゴリは変更されません。</p>
+
+<h3>購読なしでライブアクティビティは使えますか？</h3>
+<p>はい。Dynamic Islandとロック画面のライブアクティビティは、無料プランのユーザーを含むすべてのユーザーに無料で提供されます。</p>
+
+<h3>標高プロファイルには何が表示されますか？</h3>
+<p>ランの詳細ページには、ルートに沿ったインタラクティブな標高チャートが表示されます。チャート上をドラッグすると、任意の地点の標高が表示されます。チャートはGPSの高度データを使用するため、気圧式高度計データより精度が低い場合があります。</p>
+
+<h3>インポートしたGPXファイルのペースが不正確になることがあるのはなぜですか？</h3>
+<p>GPXファイルに速度データが含まれていない場合、RunningAirはHaversine（ハバサイン）の公式を使用してGPS座標から速度を計算します。これは本来の速度データより精度がやや劣る可能性があり、特にGPSの受信状態が悪い場所や曲がり角が多い場所で顕著です。</p>
+</div>
+
+<div class="section">
+<h2>既知の制限事項</h2>
+<ul>
+  <li>GPSの精度はデバイスのハードウェアと環境（樹木、建物、トンネル）に依存します。水平精度のしきい値：50メートル。</li>
+  <li>標高はGPSから算出されるため、気圧センサーより精度が低い場合があります。標高プロファイルを確認する際はご注意ください。</li>
+  <li>アプリはAppleヘルスと連携しません。ラン記録はヘルスケアアプリに同期されません。</li>
+  <li>無料プランは保存できるランが8回までです。ストレージを管理するには、ランを書き出すか削除してください。</li>
+  <li>AI分析はあくまで参考です。トレーニングの判断は必ず医療専門家にご相談ください。</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>お問い合わせ</h2>
+<p>ご質問、不具合の報告、機能リクエストは、開発者までメールでご連絡ください。</p>
+<p><a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+</div>
+
+<div class="footer">
+  <p>RunningAir v1.2.8 &nbsp;|&nbsp; iOS 17.0+ &nbsp;|&nbsp; <a href="index.html">プライバシーポリシー</a> &nbsp;|&nbsp; <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">利用規約</a></p>
+</div>
+
+</div>
+
+<div id="nl" class="lang-block" lang="nl" style="display:none">
+
+<h1>RunningAir — Ondersteuning</h1>
+<p>Minimale 1Hz GPS-renlogger voor iOS. Volledig offline. Geen account nodig.</p>
+
+<div class="section">
+<h2>Functies</h2>
+<table>
+  <tr><th>Functie</th><th>Beschikbaarheid</th></tr>
+  <tr><td>1Hz GPS-runopname (start / pauze / hervat / stop)</td><td><span class="badge badge-free">Gratis</span></td></tr>
+  <tr><td>Realtime statistieken — afstand, tempo, snelheid, bewegingstijd</td><td><span class="badge badge-free">Gratis</span></td></tr>
+  <tr><td>Rungeschiedenis met paginering, zoeken, batchverwijderen</td><td><span class="badge badge-free">Gratis</span> (maximaal 8 runs)</td></tr>
+  <tr><td>Rundetail — hoogteprofielgrafiek, routemap</td><td><span class="badge badge-free">Gratis</span></td></tr>
+  <tr><td>Maandstatistieken — hardloopkalender met drill-down</td><td><span class="badge badge-free">Gratis</span></td></tr>
+  <tr><td>Dynamic Island / Lock Screen Live Activity</td><td><span class="badge badge-free">Gratis</span></td></tr>
+  <tr><td>GPX 1.1-export &amp; delen</td><td><span class="badge badge-free">Gratis</span></td></tr>
+  <tr><td>GPX / ZIP / SQLite-database-import</td><td><span class="badge badge-free">Gratis</span></td></tr>
+  <tr><td>AI-loopadvies (Core ML op het apparaat)</td><td><span class="badge">Lid</span></td></tr>
+  <tr><td>Vermoeidheidsbewust advies &amp; vermoeidheidsbadge in de runlijst</td><td><span class="badge">Lid</span></td></tr>
+  <tr><td>Onbeperkte runopslag (meer dan 8 runs)</td><td><span class="badge">Lid</span></td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Lidmaatschap</h2>
+<p>RunningAir biedt een optioneel automatisch verlengbaar lidmaatschap om onbeperkte opslag en AI-analyse te ontgrendelen.</p>
+<table>
+  <tr><td>Product</td><td><code>com.vega.running.member</code></td></tr>
+  <tr><td>Prijs</td><td>$0,99 per 3 maanden</td></tr>
+  <tr><td>Gratis proefperiode</td><td>2 weken (annuleer op elk moment vóór het einde van de proefperiode en u wordt niet in rekening gebracht)</td></tr>
+  <tr><td>Betaling</td><td>Verwerkt door Apple via uw App Store-account</td></tr>
+  <tr><td>Automatische verlenging</td><td>Uw abonnement wordt automatisch verlengd, tenzij automatische verlenging minstens 24 uur vóór het einde van de huidige periode wordt uitgeschakeld</td></tr>
+</table>
+
+<p><strong>Gratis laag:</strong> U kunt maximaal 8 voltooide runs opslaan. Wanneer u deze limiet overschrijdt, verschijnt de paywall bij het starten van een nieuwe run of bij het importeren van een database met meer dan 8 runs (geïmporteerde GPX/ZIP-bestanden worden begrensd op de resterende gratis ruimte).</p>
+
+<p><strong>Uw abonnement beheren:</strong></p>
+<ul>
+  <li>Open de RunningAir-app → tik op het kroonpictogram → <em>Abonnement beheren</em></li>
+  <li>Of ga naar <strong>Instellingen → Apple-account → Abonnementen</strong> op uw apparaat</li>
+  <li>Annuleren: schakel automatische verlenging in Instellingen uit vóór het einde van de huidige periode</li>
+</ul>
+
+<p><strong>Aankopen herstellen:</strong> Als u al op een ander apparaat bent geabonneerd of na een herinstallatie, tik dan op <em>Aankopen herstellen</em> in het paywall-scherm.</p>
+
+<p><strong>Gebruikers van oudere versies:</strong> Als u eerder de eenmalige "Dynamic Island Pro"-upgrade hebt gekocht, is uw lidmaatschap automatisch actief — geen abonnement nodig.</p>
+</div>
+
+<div class="section">
+<h2>Privacy</h2>
+<p>RunningAir is <strong>volledig offline</strong> — uw gegevens verlaten uw apparaat nooit. Zie het volledige <a href="index.html">privacybeleid</a>.</p>
+<ul>
+  <li>Geen account, geen inloggen, geen servers</li>
+  <li>Geen analyses, geen advertenties, geen tracking</li>
+  <li>Geen HealthKit, geen hartslag, geen stappenteller</li>
+  <li>Optionele runbeoordelingen en trainingscontext-snapshots blijven op uw apparaat</li>
+  <li>Alle gegevens worden lokaal opgeslagen in SQLite</li>
+  <li>Gegevens gaan verloren als u de app verwijdert (geen cloudback-up)</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Veelgestelde vragen</h2>
+
+<h3>Waarom heeft de app locatietoestemming nodig?</h3>
+<p>RunningAir gebruikt GPS om uw hardlooproute, afstand, tempo en hoogte op te nemen. Locatie wordt alleen bijgehouden tijdens actieve opnamesessies. Er verschijnt een blauwe indicator in de statusbalk wanneer GPS actief is.</p>
+
+<h3>Trekt locatie op de achtergrond mijn batterij leeg?</h3>
+<p>Locatie-updates vinden alleen plaats terwijl u een run opneemt. Als u de app inactief laat (niet opnemen), wordt er geen GPS-gegevens verzameld en wordt er geen batterij verbruikt voor locatie.</p>
+
+<h3>Wat gebeurt er met mijn gegevens als ik de app verwijder?</h3>
+<p>Alle gegevens worden lokaal op uw apparaat opgeslagen. Als u de app verwijdert, worden uw runs en gegevens permanent gewist. Gebruik de functie <em>Database exporteren</em> (Instellingen → Database exporteren) om uw gegevens vóór het verwijderen te back-uppen.</p>
+
+<h3>Kan ik mijn gegevens overzetten naar een nieuwe iPhone?</h3>
+<p>Ja. Exporteer uw database vanaf het oude apparaat (Instellingen → Database exporteren), stuur het <code>.sqlite</code>-bestand naar het nieuwe apparaat en importeer het vervolgens in RunningAir (Importeer → selecteer het <code>.sqlite</code>-bestand).</p>
+
+<h3>Kan ik runs uit andere apps importeren?</h3>
+<p>RunningAir ondersteunt het importeren van GPX-bestanden en ZIP-archieven met GPX-bestanden van apps zoals FitoTrack, Garmin Connect, Strava (GPX-export) en andere. U kunt ook een eerder geëxporteerde RunningAir <code>.sqlite</code>-database importeren.</p>
+
+<h3>Welke AI-analysefuncties zijn inbegrepen?</h3>
+<p>AI op het apparaat classificeert elke run in een van de vier categorieën:</p>
+<ul>
+  <li><strong style="color:#d32f2f;">Rust</strong> — hersteldag aanbevolen</li>
+  <li><strong style="color:#f57c00;">Licht</strong> — lichte herstelrun</li>
+  <li><strong style="color:#1976d2;">Behouden</strong> — huidige trainingsbelasting behouden</li>
+  <li><strong style="color:#388e3c;">Verhogen</strong> — klaar om harder te trainen</li>
+</ul>
+<p>De analyse gebruikt tempo, tempoverval, tempovariatie, afstand, duur en hoogtewinst — volledig verwerkt op uw apparaat via Core ML, en houdt ook rekening met uw recente trainingsfrequentie en -belasting.</p>
+
+<h3>Wat is de vermoeidheidswaarschuwing?</h3>
+<p>Naast één enkele run bekijkt de app uw laatste 7/28 dagen training — afstand, frequentie, belasting en opeenvolgende hardloopdagen — om vermoeidheid te signaleren. Wanneer er een zware periode wordt gedetecteerd, toont de app een oranje waarschuwingsregel in de advieskaart van de run en een kleine driehoek naast de run in uw geschiedenis (oranje = vermoeid, rood = overtraind). Het maakt het advies alleen maar <em>conservatiever</em> (bijvoorbeeld een lichte of rustdag suggereren), nooit agressiever. Dit wordt allemaal op uw apparaat berekend op basis van uw eigen runs.</p>
+
+<h3>Hoe beoordeel ik hoe een run voelde?</h3>
+<p>Beoordelen is optioneel. Open een run uit uw geschiedenis en tik op <em>Vastleggen hoe deze run voelde</em>, kies daarna de optie die het best bij uw ervaring past. U kunt dit op elk moment wijzigen of wissen vanuit dezelfde sectie. Uw beoordeling blijft op uw apparaat en wordt alleen als persoonlijke referentie naast de eigen analyse van de app gebruikt — het verandert de adviescategorie niet.</p>
+
+<h3>Werkt Live Activity zonder abonnement?</h3>
+<p>Ja. De Dynamic Island en Lock Screen Live Activity is gratis voor alle gebruikers, inclusief het gratis niveau.</p>
+
+<h3>Wat toont het hoogteprofiel?</h3>
+<p>De rundetailpagina toont een interactieve hoogtegrafiek langs uw route. Sleep over de grafiek om de hoogte op elk punt te zien. De grafiek gebruikt GPS-hoogtegegevens, die mogelijk minder nauwkeurig zijn dan barometrische hoogtemetergegevens.</p>
+
+<h3>Waarom is mijn tempo soms onnauwkeurig voor geïmporteerde GPX-bestanden?</h3>
+<p>Als een GPX-bestand geen snelheidsgegevens bevat, berekent RunningAir de snelheid uit GPS-coördinaten met de Haversine-formule. Dit kan iets minder nauwkeurig zijn dan oorspronkelijke snelheidsgegevens, vooral in gebieden met slechte GPS-ontvangst of veel bochten.</p>
+</div>
+
+<div class="section">
+<h2>Bekende beperkingen</h2>
+<ul>
+  <li>GPS-nauwkeurigheid hangt af van hardware en omgeving (bomen, gebouwen, tunnels). Nauwkeurigheidsdrempel horizontaal: 50 meter.</li>
+  <li>Hoogte is afgeleid van GPS, wat minder nauwkeurig is dan barometrische sensoren. Houd hier rekening mee bij het bekijken van hoogteprofielen.</li>
+  <li>De app is niet geïntegreerd met Apple Health — rundata wordt niet gesynchroniseerd naar de Gezondheid-app.</li>
+  <li>Het gratis niveau is beperkt tot 8 opgeslagen runs. Exporteer of verwijder runs om opslag te beheren.</li>
+  <li>AI-analyse is alleen adviserend — raadpleeg altijd een medisch professional voor trainingsbeslissingen.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Contact</h2>
+<p>Voor vragen, bugrapporten of functieverzoeken kunt u de ontwikkelaar e-mailen:</p>
+<p><a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+</div>
+
+<div class="footer">
+  <p>RunningAir v1.2.8 &nbsp;|&nbsp; iOS 17.0+ &nbsp;|&nbsp; <a href="index.html">Privacybeleid</a> &nbsp;|&nbsp; <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Gebruiksvoorwaarden</a></p>
+</div>
+
+</div>
+
+<script>
+  (function () {
+    var nav = document.querySelector('.lang-switch');
+    if (!nav) return;
+    nav.addEventListener('click', function (e) {
+      var link = e.target.closest('.lang');
+      if (!link) return;
+      e.preventDefault();
+      showLang(link.getAttribute('data-lang'));
+      history.replaceState(null, '', '#' + link.getAttribute('data-lang'));
+    });
+    function showLang(lang) {
+      document.querySelectorAll('.lang-block').forEach(function (block) {
+        block.style.display = block.id === lang ? 'block' : 'none';
+      });
+      document.querySelectorAll('.lang').forEach(function (x) {
+        x.classList.toggle('active', x.getAttribute('data-lang') === lang);
+      });
+    }
+    var initial = location.hash.replace('#', '');
+    if (initial && document.getElementById(initial)) showLang(initial);
+  })();
+</script>
 
 </body>
 </html>
