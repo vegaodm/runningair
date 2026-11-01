@@ -42,7 +42,7 @@
 <div id="en" class="lang-block" lang="en">
 
 <h1>Privacy Policy</h1>
-<p class="effective">Effective date: September 21, 2026 &nbsp;|&nbsp; Version 1.5</p>
+<p class="effective">Effective date: November 1, 2026 &nbsp;|&nbsp; Version 1.7</p>
 
 <p>This Privacy Policy applies to the RunningAir app for iOS ("the Application"), operated by BIN XIAO ("the Service Provider"). RunningAir is a <strong>fully offline</strong> GPS running tracker — it <strong>never</strong> transmits your data to any server, cloud service, or third party.</p>
 
@@ -53,7 +53,7 @@
   <li><strong>Run metadata</strong> — start time, end time, total distance, moving time, and pace, computed from the GPS data.</li>
   <li><strong>Training context</strong> — rolling load, frequency, and fatigue indicators (e.g., 7/28-day distance, consecutive run days) derived on-device from your own runs to improve the advice shown for each run.</li>
   <li><strong>Optional run rating</strong> — if you choose to rate how a run felt ("How You Felt"), that single subjective choice is stored locally on your device. It is entirely optional and is never required to use the app.</li>
-  <li><strong>Subscription status</strong> — a boolean flag (member / non-member) stored locally via UserDefaults to unlock premium features. No payment information is stored in the app.</li>
+  <li><strong>Membership status</strong> — a single boolean flag (member / non-member) stored locally in UserDefaults that unlocks unlimited run storage (the free tier keeps up to 8 finished runs). No payment information is stored in the app.</li>
 </ul>
 
 <div class="note">
@@ -66,7 +66,7 @@
   <li>Display your running route, distance, pace, and elevation on your device.</li>
   <li>Provide on-device AI analysis of your running patterns (using Core ML — no data leaves your phone).</li>
   <li>Generate fatigue-aware training advice from your own run history, and use your optional "How You Felt" rating solely as a local, personal reference.</li>
-  <li>Export runs as GPX files or back up your database, but only when <em>you</em> choose to share or export.</li>
+  <li>Export runs as GPX files, back up your database, or export a short run/month text summary for AI — but only when <em>you</em> choose to share or export.</li>
 </ul>
 
 <h2>Data Storage</h2>
@@ -82,10 +82,11 @@
 <ul>
   <li><strong>GPX export</strong> — sharing a run file via the iOS Share Sheet (AirDrop, Messages, Files, etc.).</li>
   <li><strong>SQLite database export</strong> — exporting a backup file via the iOS Share Sheet.</li>
+  <li><strong>AI text export (“Share for AI”)</strong> — a short text summary of one run or one month, sent through the iOS Share Sheet to whichever app you pick. It contains no route coordinates, only the numbers and your optional felt rating. If you paste it into an online assistant, the summary leaves your device and that provider’s privacy policy applies; a local model running on your device keeps it there.</li>
 </ul>
 
-<h2>In-App Purchases &amp; Subscriptions</h2>
-<p>RunningAir offers an optional auto-renewable membership subscription (<code>com.vega.running.member</code>, $0.99 / 3 months, with a 2-week free trial). All payment processing is handled entirely by Apple through the App Store. RunningAir <strong>does not</strong> receive, store, or process any payment card information, billing details, or Apple ID credentials. Subscription status is verified locally via StoreKit.</p>
+<h2>In-App Purchases</h2>
+<p>RunningAir offers an optional <strong>one-time</strong> purchase ($4.99) that unlocks unlimited run storage. It is <strong>not</strong> a subscription — nothing renews and there is nothing to cancel. All payment processing is handled entirely by Apple through the App Store. RunningAir <strong>does not</strong> receive, store, or process any payment card information, billing details, or Apple ID credentials. Purchase status is verified locally via StoreKit.</p>
 
 <h2>Third-Party Services</h2>
 <p>RunningAir does <strong>not</strong> use any third-party analytics SDKs, advertising networks, crash reporting services, or tracking technologies. The Application contains no cookies, pixels, or similar tracking mechanisms.</p>
@@ -131,7 +132,7 @@
 <div id="zh" class="lang-block" lang="zh-Hans" style="display:none">
 
 <h1>隐私政策</h1>
-<p class="effective">生效日期：2026 年 9 月 21 日 &nbsp;|&nbsp; 版本 1.5</p>
+<p class="effective">生效日期：2026 年 11 月 1 日 &nbsp;|&nbsp; 版本 1.7</p>
 
 <p>本隐私政策适用于由 BIN XIAO（"服务提供方"）运营的 iOS 版 RunningAir 应用（"本应用"）。RunningAir 是一个<strong>完全离线</strong>的 GPS 跑步记录工具——它<strong>绝不会</strong>将你的数据发送到任何服务器、云服务或第三方。</p>
 
@@ -142,7 +143,7 @@
   <li><strong>跑步元数据</strong>——由 GPS 数据计算得出的开始时间、结束时间、总距离、移动时间和配速。</li>
   <li><strong>训练背景信息</strong>——由你自己的跑步记录在设备端推导出的阶段性负荷、频率和疲劳指标（例如 7/28 天跑量、连续跑步天数），用于改进每次跑步所显示的建议。</li>
   <li><strong>可选的跑步体感评分</strong>——如果你选择评价一次跑步的感受（"你的感受"），这一条主观选择只保存在你的设备本地。它完全可选，使用应用时绝不强制。</li>
-  <li><strong>订阅状态</strong>——通过 UserDefaults 在本地存储的布尔标志（会员 / 非会员），用于解锁高级功能。应用内不存储任何支付信息。</li>
+  <li><strong>会员状态</strong>——通过 UserDefaults 在本地存储的布尔标志（会员 / 非会员），用于解锁不限条数的跑步记录（免费档最多保留 8 次已完成跑步）。应用内不存储任何支付信息。</li>
 </ul>
 
 <div class="note">
@@ -155,7 +156,7 @@
   <li>在设备上显示你的跑步路线、距离、配速和海拔。</li>
   <li>提供设备端 AI 跑步模式分析（使用 Core ML——数据不会离开你的手机）。</li>
   <li>根据你自身的跑步历史生成关注疲劳的训练建议，并将你选填的"你的感受"评分仅作为本地个人参考。</li>
-  <li>以 GPX 文件导出跑步记录或备份数据库，但仅在你<em>主动</em>选择分享或导出时才进行。</li>
+  <li>把跑步导出为 GPX、备份数据库，或导出单次／整月的 AI 短摘要，但仅在你<em>主动</em>选择分享或导出时才进行。</li>
 </ul>
 
 <h2>数据存储</h2>
@@ -171,10 +172,11 @@
 <ul>
   <li><strong>GPX 导出</strong>——通过 iOS 分享面板分享跑步文件（隔空投送、信息、文件等）。</li>
   <li><strong>SQLite 数据库导出</strong>——通过 iOS 分享面板导出备份文件。</li>
+  <li><strong>AI 文本导出（「分享给 AI」）</strong>——把一次跑步或一个月压成一段短文本，通过 iOS 分享面板发送到你选择的应用。文本不含轨迹坐标，只有数字与你（可选）的体感评价。若你把它粘贴到在线 AI 助手，这段摘要会离开你的设备并适用该服务商的隐私政策；在设备上运行的本地模型则不会。</li>
 </ul>
 
-<h2>应用内购买与订阅</h2>
-<p>RunningAir 提供可选的自动续费会员订阅（<code>com.vega.running.member</code>，每 3 个月 $0.99，含 2 周免费试用）。所有支付处理完全由 Apple 通过 App Store 完成。RunningAir <strong>不会</strong>接收、存储或处理任何支付卡信息、账单详情或 Apple ID 凭据。订阅状态通过 StoreKit 在本地验证。</p>
+<h2>应用内购买</h2>
+<p>RunningAir 提供可选的<strong>一次性</strong>购买（$4.99），用于解锁不限条数的跑步记录。它<strong>不是</strong>订阅——不会自动续费，也没有需要取消的项目。所有支付处理完全由 Apple 通过 App Store 完成。RunningAir <strong>不会</strong>接收、存储或处理任何支付卡信息、账单详情或 Apple ID 凭据。购买状态通过 StoreKit 在本地验证。</p>
 
 <h2>第三方服务</h2>
 <p>RunningAir <strong>不使用</strong>任何第三方分析 SDK、广告网络、崩溃上报服务或跟踪技术。本应用不包含 Cookie、像素或其他类似的跟踪机制。</p>
@@ -220,7 +222,7 @@
 <div id="ja" class="lang-block" lang="ja" style="display:none">
 
 <h1>プライバシーポリシー</h1>
-<p class="effective">発効日：2026年9月21日 &nbsp;|&nbsp; バージョン 1.5</p>
+<p class="effective">発効日：2026年11月1日 &nbsp;|&nbsp; バージョン 1.7</p>
 
 <p>本プライバシーポリシーは、BIN XIAO（「サービス提供者」）が運営するiOS用のRunningAirアプリ（「本アプリ」）に適用されます。RunningAirは<strong>完全オフライン</strong>のGPSランニング記録アプリです。あなたのデータがサーバー、クラウドサービス、第三者に送信されることは<strong>一切</strong>ありません。</p>
 
@@ -231,7 +233,7 @@
   <li><strong>ランニングメタデータ</strong>——GPSデータから算出される開始時刻・終了時刻・総距離・移動時間・ペース。</li>
   <li><strong>トレーニングコンテキスト</strong>——あなた自身のランニング履歴からデバイス上で導出される負荷・頻度・疲労指標（7/28日間の走行距離、連続ランニング日数など）。ランのたびに表示されるアドバイスの改善に使用します。</li>
   <li><strong>任意のラン評価</strong>——ランの体感を評価する（「体感」）場合、その単一の主観的な選択はデバイスローカルにのみ保存されます。完全に任意であり、アプリの利用に必須ではありません。</li>
-  <li><strong>購読ステータス</strong>——プレミアム機能を解除するためのブール値（メンバー／非メンバー）をUserDefaultsでローカルに保存します。支払い情報はアプリに一切保存されません。</li>
+  <li><strong>メンバーシップ状態</strong>——ランの保存を無制限にするためのブール値（メンバー／非メンバー）をUserDefaultsでローカルに保存します（無料版は完了したランを8件まで保存）。支払い情報はアプリに一切保存されません。</li>
 </ul>
 
 <div class="note">
@@ -244,7 +246,7 @@
   <li>お使いのデバイスで走行ルート・距離・ペース・標高を表示する。</li>
   <li>デバイス上でランニングパターンをAI分析する（Core MLを使用。データが端末の外に出ることはありません）。</li>
   <li>あなた自身の走行履歴から疲労に配慮したトレーニングアドバイスを生成し、任意の「体感」評価をローカルな個人参照としてのみ使用する。</li>
-  <li>ランのGPXファイルへのエクスポートやデータベースのバックアップ。ただし、あなたが<em>自分で</em>共有・エクスポートを選択した場合に限ります。</li>
+  <li>ランのGPXファイルへのエクスポート、データベースのバックアップ、またはAI用の短いテキスト（1回／1か月）の書き出し。ただし、あなたが<em>自分で</em>共有・エクスポートを選択した場合に限ります。</li>
 </ul>
 
 <h2>データの保存</h2>
@@ -260,10 +262,11 @@
 <ul>
   <li><strong>GPXエクスポート</strong>——iOSの共有シート（AirDrop、メッセージ、ファイルなど）でランファイルを共有する。</li>
   <li><strong>SQLiteデータベースのエクスポート</strong>——共有シートでバックアップファイルをエクスポートする。</li>
+  <li><strong>AI用テキストの書き出し（「AI と共有」）</strong>——1回のランまたは1か月分を短いテキストにまとめ、iOSの共有シートで選んだアプリに送ります。ルート座標は含まず、数値と（任意の）体感評価だけです。オンラインのAIに貼り付けた場合は端末の外に出て、そのサービスのプライバシーポリシーが適用されます。端末上で動くローカルモデルなら端末内に留まります。</li>
 </ul>
 
-<h2>アプリ内課金と購読</h2>
-<p>RunningAirは任意の自動更新式メンバーシップ購読（<code>com.vega.running.member</code>、3ヶ月$0.99、2週間の無料トライアル）を提供します。すべての支払い処理はAppleがApp Storeを通じて完全に管理します。RunningAirは支払いカード情報、請求詳細、Apple IDの資格情報を<strong>一切</strong>受け取らず、保存も処理もしません。購読ステータスはStoreKitでローカルに検証されます。</p>
+<h2>アプリ内課金</h2>
+<p>RunningAirは任意の<strong>買い切り</strong>購入（$4.99）を提供しており、ランの保存無制限を解除します。これは<strong>サブスクリプションではありません</strong>——自動更新も解約手続きもありません。すべての支払い処理はAppleがApp Storeを通じて完全に管理します。RunningAirは支払いカード情報、請求詳細、Apple IDの資格情報を<strong>一切</strong>受け取らず、保存も処理もしません。購入状態はStoreKitでローカルに検証されます。</p>
 
 <h2>第三者サービス</h2>
 <p>RunningAirは第三者提供の分析SDK、広告ネットワーク、クラッシュレポートサービス、トラッキング技術を<strong>一切</strong>使用していません。本アプリにはCookie、ピクセル、その他類似のトラッキング機構は含まれません。</p>
@@ -309,7 +312,7 @@
 <div id="nl" class="lang-block" lang="nl" style="display:none">
 
 <h1>Privacybeleid</h1>
-<p class="effective">Ingangsdatum: 21 september 2026 &nbsp;|&nbsp; Versie 1.5</p>
+<p class="effective">Ingangsdatum: 1 november 2026 &nbsp;|&nbsp; Versie 1.7</p>
 
 <p>Dit privacybeleid is van toepassing op de RunningAir-app voor iOS ("de Applicatie"), beheerd door BIN XIAO ("de Dienstverlener"). RunningAir is een <strong>volledig offline</strong> GPS-renlogger — uw gegevens worden <strong>nooit</strong> naar een server, cloudservice of derde partij verzonden.</p>
 
@@ -320,7 +323,7 @@
   <li><strong>Runmetagegevens</strong> — starttijd, eindtijd, totale afstand, bewegingstijd en tempo, berekend uit de GPS-gegevens.</li>
   <li><strong>Trainingscontext</strong> — voortschrijdende belasting, frequentie en vermoeidheidsindicatoren (bijv. 7/28-daagse afstand, opeenvolgende hardloopdagen) die op het apparaat uit uw eigen runs worden afgeleid om het advies per run te verbeteren.</li>
   <li><strong>Optionele runbeoordeling</strong> — als u kiest om te beoordelen hoe een run voelde ("Hoe voelde de run"), wordt die ene subjectieve keuze lokaal op uw apparaat opgeslagen. Het is volledig optioneel en nooit vereist om de app te gebruiken.</li>
-  <li><strong>Abonnementsstatus</strong> — een booleaanse vlag (lid / niet-lid) die lokaal via UserDefaults wordt opgeslagen om premiumfuncties te ontgrendelen. Er wordt geen betaalinformatie in de app opgeslagen.</li>
+  <li><strong>Lidmaatschapstatus</strong> — een booleaanse vlag (lid / niet-lid) die lokaal via UserDefaults wordt opgeslagen en onbeperkte opslag van runs ontgrendelt (de gratis versie bewaart maximaal 8 afgeronde runs). Er wordt geen betaalinformatie in de app opgeslagen.</li>
 </ul>
 
 <div class="note">
@@ -333,7 +336,7 @@
   <li>uw hardlooproute, afstand, tempo en hoogte op uw apparaat weer te geven.</li>
   <li>AI-analyse van uw hardlooppatronen op het apparaat te bieden (via Core ML — er verlaten geen gegevens uw telefoon).</li>
   <li>op vermoeidheid gebaseerd trainingsadvies te genereren uit uw eigen rungeschiedenis, en uw optionele "Hoe voelde de run"-beoordeling uitsluitend als lokale, persoonlijke referentie te gebruiken.</li>
-  <li>runs te exporteren als GPX-bestanden of uw database te back-uppen, maar uitsluitend wanneer u er<em> zelf</em> voor kiest om te delen of te exporteren.</li>
+  <li>runs te exporteren als GPX-bestanden, uw database te back-uppen of een korte AI-samenvatting van één run of één maand te exporteren, maar uitsluitend wanneer u er<em> zelf</em> voor kiest om te delen of te exporteren.</li>
 </ul>
 
 <h2>Gegevensopslag</h2>
@@ -349,10 +352,11 @@
 <ul>
   <li><strong>GPX-export</strong> — een runbestand delen via het iOS-deelblad (AirDrop, Berichten, Bestanden, enz.).</li>
   <li><strong>SQLite-database-export</strong> — een back-upbestand exporteren via het iOS-deelblad.</li>
+  <li><strong>AI-tekstexport (“Delen met AI”)</strong> — een korte tekstsamenvatting van één run of één maand, via het iOS-deelblad naar de app die u kiest. De tekst bevat geen routecoördinaten, alleen de cijfers en uw optionele gevoelsbeoordeling. Plakt u hem in een online assistent, dan verlaat de samenvatting uw toestel en geldt het privacybeleid van die aanbieder; een lokaal model op uw toestel houdt hem daar.</li>
 </ul>
 
-<h2>In-app-aankopen en abonnementen</h2>
-<p>RunningAir biedt een optioneel automatisch verlengbaar lidmaatschap (<code>com.vega.running.member</code>, $0,99 / 3 maanden, met een gratis proefperiode van 2 weken). Alle betalingsverwerking wordt volledig door Apple via de App Store afgehandeld. RunningAir ontvangt, slaat of verwerkt <strong>geen</strong> betalingskaartgegevens, factuurgegevens of Apple ID-referenties. De abonnementsstatus wordt lokaal via StoreKit geverifieerd.</p>
+<h2>In-app-aankopen</h2>
+<p>RunningAir biedt een optionele <strong>eenmalige</strong> aankoop ($4,99) die onbeperkte opslag van runs ontgrendelt. Het is <strong>geen</strong> abonnement — niets wordt verlengd en er valt niets op te zeggen. Alle betalingsverwerking wordt volledig door Apple via de App Store afgehandeld. RunningAir ontvangt, slaat of verwerkt <strong>geen</strong> betalingskaartgegevens, factuurgegevens of Apple ID-referenties. De aankoopstatus wordt lokaal via StoreKit geverifieerd.</p>
 
 <h2>Diensten van derden</h2>
 <p>RunningAir gebruikt <strong>geen</strong> analyses-SDK's van derden, advertentienetwerken, crashrapportagediensten of trackingtechnologieën. De Applicatie bevat geen cookies, pixels of vergelijkbare trackingmechanismen.</p>
@@ -398,7 +402,7 @@
 <div id="fr" class="lang-block" lang="fr" style="display:none">
 
 <h1>Politique de confidentialité</h1>
-<p class="effective">Date d'entrée en vigueur : 21 septembre 2026 &nbsp;|&nbsp; Version 1.5</p>
+<p class="effective">Date d'entrée en vigueur : 1 novembre 2026 &nbsp;|&nbsp; Version 1.7</p>
 
 <p>La présente politique de confidentialité s'applique à l'application RunningAir pour iOS (« l'Application »), exploitée par BIN XIAO (« le Prestataire »). RunningAir est un tracker GPS de course <strong>entièrement hors ligne</strong> — vos données ne sont <strong>jamais</strong> transmises à un serveur, un service cloud ou un tiers.</p>
 
@@ -409,7 +413,7 @@
   <li><strong>Métadonnées de course</strong> — heure de début, heure de fin, distance totale, temps de mouvement et allure, calculées à partir des données GPS.</li>
   <li><strong>Contexte d'entraînement</strong> — charge, fréquence et indicateurs de fatigue (ex. distance sur 7/28 jours, jours de course consécutifs) dérivés sur l'appareil de vos propres courses pour améliorer le conseil affiché pour chaque course.</li>
   <li><strong>Évaluation de course facultative</strong> — si vous choisissez d'évaluer une course (« Comment vous vous êtes senti »), ce choix subjectif unique est stocké localement sur votre appareil. Il est entièrement facultatif et jamais requis pour utiliser l'application.</li>
-  <li><strong>Statut d'abonnement</strong> — un indicateur booléen (membre / non-membre) stocké localement via UserDefaults pour débloquer les fonctionnalités premium. Aucune information de paiement n'est stockée dans l'application.</li>
+  <li><strong>Statut de membre</strong> — un indicateur booléen (membre / non-membre) stocké localement via UserDefaults qui débloque le stockage illimité des courses (l’offre gratuite conserve jusqu’à 8 courses terminées). Aucune information de paiement n’est stockée dans l’application.</li>
 </ul>
 
 <div class="note">
@@ -422,7 +426,7 @@
   <li>Afficher votre itinéraire de course, votre distance, votre allure et votre altitude sur votre appareil.</li>
   <li>Fournir une analyse IA sur l'appareil de vos habitudes de course (via Core ML — aucune donnée ne quitte votre téléphone).</li>
   <li>Générer un conseil d'entraînement tenant compte de la fatigue à partir de votre propre historique, et utiliser votre évaluation facultative « Comment vous vous êtes senti » uniquement comme référence personnelle locale.</li>
-  <li>Exporter les courses en fichiers GPX ou sauvegarder votre base de données, mais uniquement lorsque <em>vous</em> choisissez de partager ou d'exporter.</li>
+  <li>Exporter les courses en fichiers GPX, sauvegarder votre base de données ou exporter un court résumé pour l’IA (une course ou un mois), mais uniquement lorsque <em>vous</em> choisissez de partager ou d’exporter.</li>
 </ul>
 
 <h2>Stockage des données</h2>
@@ -438,10 +442,11 @@
 <ul>
   <li><strong>Export GPX</strong> — partage d'un fichier de course via la feuille de partage iOS (AirDrop, Messages, Fichiers, etc.).</li>
   <li><strong>Export de la base de données SQLite</strong> — export d'un fichier de sauvegarde via la feuille de partage iOS.</li>
+  <li><strong>Export texte pour IA (« Partager avec l’IA »)</strong> — un court résumé d’une course ou d’un mois, envoyé via la feuille de partage iOS vers l’app de votre choix. Il ne contient aucune coordonnée d’itinéraire, seulement les chiffres et votre appréciation ressentie (facultative). Si vous le collez dans un assistant en ligne, le résumé quitte votre appareil et la politique de confidentialité de ce fournisseur s’applique ; un modèle local exécuté sur votre appareil l’y garde.</li>
 </ul>
 
-<h2>Achats intégrés et abonnements</h2>
-<p>RunningAir propose un abonnement facultatif à renouvellement automatique (<code>com.vega.running.member</code>, 0,99 $ / 3 mois, avec un essai gratuit de 2 semaines). Tout le traitement des paiements est entièrement assuré par Apple via l'App Store. RunningAir <strong>ne reçoit, ne stocke ni ne traite</strong> aucune information de carte de paiement, aucun détail de facturation ni aucune information d'identification Apple. Le statut d'abonnement est vérifié localement via StoreKit.</p>
+<h2>Achats intégrés</h2>
+<p>RunningAir propose un achat <strong>unique</strong> facultatif (4,99 $) qui débloque le stockage illimité des courses. Ce n’est <strong>pas</strong> un abonnement : rien n’est renouvelé et il n’y a rien à résilier. Tout le traitement des paiements est entièrement assuré par Apple via l’App Store. RunningAir <strong>ne reçoit, ne stocke ni ne traite</strong> aucune information de carte de paiement, aucun détail de facturation ni aucune information d’identification Apple. Le statut de l’achat est vérifié localement via StoreKit.</p>
 
 <h2>Services tiers</h2>
 <p>RunningAir n'utilise aucun SDK d'analyse tiers, réseau publicitaire, service de rapport de crash ou technologie de suivi. L'Application ne contient aucun cookie, pixel ou mécanisme de suivi similaire.</p>
@@ -487,7 +492,7 @@
 <div id="de" class="lang-block" lang="de" style="display:none">
 
 <h1>Datenschutzrichtlinie</h1>
-<p class="effective">Datum des Inkrafttretens: 21. September 2026 &nbsp;|&nbsp; Version 1.5</p>
+<p class="effective">Datum des Inkrafttretens: 1. November 2026 &nbsp;|&nbsp; Version 1.7</p>
 
 <p>Diese Datenschutzrichtlinie gilt für die RunningAir-App für iOS („die App“), betrieben von BIN XIAO („der Dienstanbieter“). RunningAir ist ein <strong>vollständig offline</strong> arbeitender GPS-Lauftracker — Ihre Daten werden <strong>niemals</strong> an einen Server, einen Cloud-Dienst oder Dritte übertragen.</p>
 
@@ -498,7 +503,7 @@
   <li><strong>Lauf-Metadaten</strong> — Startzeit, Endzeit, Gesamtdistanz, Bewegungszeit und Tempo, berechnet aus den GPS-Daten.</li>
   <li><strong>Trainingskontext</strong> — fortlaufende Belastung, Häufigkeit und Ermüdungsindikatoren (z. B. 7/28-Tage-Distanz, aufeinanderfolgende Lauftage), lokal aus eigenen Läufen abgeleitet, um die Anzeige für jeden Lauf zu verbessern.</li>
   <li><strong>Optionale Laufbewertung</strong> — wenn Sie einen Lauf bewerten („Wie du dich gefühlt hast“), wird diese einzelne subjektive Wahl lokal auf Ihrem Gerät gespeichert. Sie ist vollständig optional und niemals zur Nutzung der App erforderlich.</li>
-  <li><strong>Abonnementstatus</strong> — ein boolesches Flag (Mitglied / Nicht-Mitglied), lokal über UserDefaults gespeichert, um Premium-Funktionen freizuschalten. In der App werden keine Zahlungsinformationen gespeichert.</li>
+  <li><strong>Mitgliedschaftsstatus</strong> — ein boolesches Flag (Mitglied / Nicht-Mitglied), lokal über UserDefaults gespeichert, das unbegrenzten Lauf-Speicher freischaltet (in der kostenlosen Version bleiben bis zu 8 abgeschlossene Läufe erhalten). In der App werden keine Zahlungsinformationen gespeichert.</li>
 </ul>
 
 <div class="note">
@@ -511,7 +516,7 @@
   <li>Ihre Laufroute, Distanz, Tempo und Höhe auf Ihrem Gerät anzuzeigen.</li>
   <li>eine KI-Analyse Ihrer Laufmuster auf dem Gerät anzubieten (über Core ML — keine Daten verlassen Ihr Telefon).</li>
   <li>ermüdungsbewusste Trainingsempfehlungen aus Ihrer eigenen Laufliste zu generieren und Ihre optionale Bewertung „Wie du dich gefühlt hast“ ausschließlich als lokale, persönliche Referenz zu verwenden.</li>
-  <li>Läufe als GPX-Dateien zu exportieren oder Ihre Datenbank zu sichern, aber nur, wenn <em>Sie</em> das Teilen oder Exportieren wählen.</li>
+  <li>Läufe als GPX-Dateien zu exportieren, Ihre Datenbank zu sichern oder eine kurze KI-Zusammenfassung (ein Lauf oder ein Monat) zu exportieren – aber nur, wenn <em>Sie</em> das Teilen oder Exportieren wählen.</li>
 </ul>
 
 <h2>Datenspeicherung</h2>
@@ -527,10 +532,11 @@
 <ul>
   <li><strong>GPX-Export</strong> — Teilen einer Laufdatei über das iOS-Teilen-Menü (AirDrop, Nachrichten, Dateien usw.).</li>
   <li><strong>SQLite-Datenbank-Export</strong> — Export einer Sicherungsdatei über das iOS-Teilen-Menü.</li>
+  <li><strong>KI-Text-Export („Mit KI teilen“)</strong> — eine kurze Textzusammenfassung eines Laufs oder eines Monats, über das iOS-Teilen-Menü an die App Ihrer Wahl. Sie enthält keine Routenkoordinaten, nur die Zahlen und Ihre optionale Gefühlsbewertung. Fügen Sie sie in einen Online-Assistenten ein, verlässt die Zusammenfassung Ihr Gerät und es gilt die Datenschutzerklärung dieses Anbieters; ein lokal auf Ihrem Gerät laufendes Modell behält sie dort.</li>
 </ul>
 
-<h2>In-App-Käufe und Abonnements</h2>
-<p>RunningAir bietet ein optionales, automatisch verlängerbares Mitgliedschaftsabonnement an (<code>com.vega.running.member</code>, 0,99 $ / 3 Monate, mit einer 2-wöchigen kostenlosen Testphase). Die gesamte Zahlungsabwicklung erfolgt vollständig durch Apple über den App Store. RunningAir <strong>erhält, speichert oder verarbeitet</strong> keine Zahlungskarteninformationen, Abrechnungsdetails oder Apple-ID-Anmeldedaten. Der Abonnementstatus wird lokal über StoreKit verifiziert.</p>
+<h2>In-App-Käufe</h2>
+<p>RunningAir bietet einen optionalen <strong>Einmalkauf</strong> (4,99 $) an, der unbegrenzten Lauf-Speicher freischaltet. Es handelt sich <strong>nicht</strong> um ein Abonnement — nichts verlängert sich und es gibt nichts zu kündigen. Die gesamte Zahlungsabwicklung erfolgt vollständig durch Apple über den App Store. RunningAir <strong>erhält, speichert oder verarbeitet</strong> keine Zahlungskarteninformationen, Abrechnungsdetails oder Apple-ID-Anmeldedaten. Der Kaufstatus wird lokal über StoreKit verifiziert.</p>
 
 <h2>Dienste Dritter</h2>
 <p>RunningAir nutzt keine Analyse-SDKs Dritter, Werbenetzwerke, Absturzberichtsdienste oder Tracking-Technologien. Die App enthält keine Cookies, Pixel oder ähnliche Tracking-Mechanismen.</p>
@@ -576,7 +582,7 @@
 <div id="it" class="lang-block" lang="it" style="display:none">
 
 <h1>Informativa sulla privacy</h1>
-<p class="effective">Data di entrata in vigore: 21 settembre 2026 &nbsp;|&nbsp; Versione 1.5</p>
+<p class="effective">Data di entrata in vigore: 1 novembre 2026 &nbsp;|&nbsp; Versione 1.7</p>
 
 <p>Questa Informativa sulla privacy si applica all'app RunningAir per iOS ("l'Applicazione"), gestita da BIN XIAO ("il Fornitore del servizio"). RunningAir è un tracker GPS per corsa <strong>completamente offline</strong> — <strong>non</strong> trasmette <strong>mai</strong> i tuoi dati a server, servizi cloud o terze parti.</p>
 
@@ -587,7 +593,7 @@
   <li><strong>Metadati della corsa</strong> — orario di inizio, di fine, distanza totale, tempo in movimento e passo, calcolati dai dati GPS.</li>
   <li><strong>Contesto di allenamento</strong> — carico progressivo, frequenza e indicatori di fatica (es. distanza su 7/28 giorni, giorni consecutivi di corsa) derivati localmente dalle tue corse per migliorare il consiglio mostrato per ogni corsa.</li>
   <li><strong>Valutazione facoltativa della corsa</strong> — se scegli di valutare come ti sei sentito ("Come ti sei sentito"), questa scelta soggettiva viene memorizzata localmente sul tuo dispositivo. È del tutto facoltativa e mai richiesta per usare l'app.</li>
-  <li><strong>Stato dell'abbonamento</strong> — un flag booleano (membro / non membro) memorizzato localmente tramite UserDefaults per sbloccare le funzioni premium. Nessuna informazione di pagamento viene archiviata nell'app.</li>
+  <li><strong>Stato di membro</strong> — un flag booleano (membro / non membro) memorizzato localmente tramite UserDefaults che sblocca l’archiviazione illimitata delle corse (la versione gratuita conserva fino a 8 corse concluse). Nessuna informazione di pagamento viene archiviata nell’app.</li>
 </ul>
 
 <div class="note">
@@ -600,7 +606,7 @@
   <li>Visualizzare sul tuo dispositivo il percorso, la distanza, il passo e l'altitudine della corsa.</li>
   <li>Fornire un'analisi AI locale dei tuoi schemi di corsa (tramite Core ML: nessun dato lascia il tuo telefono).</li>
   <li>Generare consigli di allenamento consapevoli della fatica dalla tua cronologia e usare la valutazione facoltativa "Come ti sei sentito" esclusivamente come riferimento personale locale.</li>
-  <li>Esportare le corse come file GPX o salvare un backup del database, ma solo quando <em>sei tu</em> a scegliere di condividere o esportare.</li>
+  <li>Esportare le corse come file GPX, salvare un backup del database o esportare un breve riepilogo per l’IA (una corsa o un mese), ma solo quando <em>sei tu</em> a scegliere di condividere o esportare.</li>
 </ul>
 
 <h2>Archiviazione dei dati</h2>
@@ -616,10 +622,11 @@
 <ul>
   <li><strong>Esportazione GPX</strong> — condividere un file di corsa tramite il foglio di condivisione iOS (AirDrop, Messaggi, File, ecc.).</li>
   <li><strong>Esportazione del database SQLite</strong> — esportare un file di backup tramite il foglio di condivisione iOS.</li>
+  <li><strong>Esportazione testo per IA («Condividi con l’IA»)</strong> — un breve riepilogo di una corsa o di un mese, inviato tramite il foglio di condivisione iOS all’app che scegli. Non contiene coordinate del percorso, solo i numeri e la tua valutazione soggettiva (facoltativa). Se lo incolli in un assistente online, il riepilogo lascia il dispositivo e si applica l’informativa di quel fornitore; un modello locale sul dispositivo lo mantiene lì.</li>
 </ul>
 
-<h2>Acquisti in-app e abbonamenti</h2>
-<p>RunningAir offre un abbonamento membership facoltativo a rinnovo automatico (<code>com.vega.running.member</code>, 0,99 $ / 3 mesi, con prova gratuita di 2 settimane). Tutta la gestione dei pagamenti è interamente gestita da Apple tramite l'App Store. RunningAir <strong>non</strong> riceve, archivia o elabora alcuna informazione su carte di pagamento, dettagli di fatturazione o credenziali Apple ID. Lo stato dell'abbonamento viene verificato localmente tramite StoreKit.</p>
+<h2>Acquisti in-app</h2>
+<p>RunningAir offre un acquisto <strong>una tantum</strong> facoltativo (4,99 $) che sblocca l’archiviazione illimitata delle corse. <strong>Non</strong> è un abbonamento: nulla si rinnova e non c’è nulla da disdire. Tutta la gestione dei pagamenti è interamente gestita da Apple tramite l’App Store. RunningAir <strong>non</strong> riceve, archivia o elabora alcuna informazione su carte di pagamento, dettagli di fatturazione o credenziali Apple ID. Lo stato dell’acquisto viene verificato localmente tramite StoreKit.</p>
 
 <h2>Servizi di terze parti</h2>
 <p>RunningAir <strong>non</strong> usa SDK analitici di terze parti, reti pubblicitarie, servizi di segnalazione crash o tecnologie di tracciamento. L'Applicazione non contiene cookie, pixel o meccanismi di tracciamento simili.</p>
@@ -665,7 +672,7 @@
 <div id="es" class="lang-block" lang="es" style="display:none">
 
 <h1>Política de privacidad</h1>
-<p class="effective">Fecha de entrada en vigor: 21 de septiembre de 2026 &nbsp;|&nbsp; Versión 1.5</p>
+<p class="effective">Fecha de entrada en vigor: 1 de noviembre de 2026 &nbsp;|&nbsp; Versión 1.7</p>
 
 <p>Esta Política de privacidad se aplica a la aplicación RunningAir para iOS ("la Aplicación"), operada por BIN XIAO ("el Proveedor del Servicio"). RunningAir es un rastreador GPS de carrera <strong>totalmente offline</strong>: <strong>nunca</strong> transmite tus datos a ningún servidor, servicio en la nube o tercero.</p>
 
@@ -676,7 +683,7 @@
   <li><strong>Metadatos de carrera</strong> — hora de inicio, hora de fin, distancia total, tiempo en movimiento y ritmo, calculados a partir de los datos GPS.</li>
   <li><strong>Contexto de entrenamiento</strong> — carga progresiva, frecuencia e indicadores de fatiga (p. ej., distancia de 7/28 días, días consecutivos de carrera) derivados en el dispositivo de tus propias carreras para mejorar el consejo mostrado en cada carrera.</li>
   <li><strong>Valoración opcional de la carrera</strong> — si eliges valorar cómo te sentiste ("Cómo te sentiste"), esa única elección subjetiva se guarda localmente en tu dispositivo. Es totalmente opcional y nunca se requiere para usar la app.</li>
-  <li><strong>Estado de la suscripción</strong> — un indicador booleano (miembro / no miembro) guardado localmente mediante UserDefaults para desbloquear funciones premium. No se almacena ninguna información de pago en la app.</li>
+  <li><strong>Estado de miembro</strong> — un indicador booleano (miembro / no miembro) guardado localmente mediante UserDefaults que desbloquea el almacenamiento ilimitado de carreras (la versión gratuita conserva hasta 8 carreras terminadas). No se almacena ninguna información de pago en la app.</li>
 </ul>
 
 <div class="note">
@@ -689,7 +696,7 @@
   <li>Mostrar en tu dispositivo tu ruta, distancia, ritmo y altitud de carrera.</li>
   <li>Proporcionar análisis de IA locales de tus patrones de carrera (mediante Core ML: ningún dato sale de tu teléfono).</li>
   <li>Generar consejos de entrenamiento con conciencia de fatiga a partir de tu historial y usar tu valoración opcional "Cómo te sentiste" únicamente como referencia personal local.</li>
-  <li>Exportar carreras como archivos GPX o hacer una copia de seguridad de tu base de datos, pero solo cuando <em>tú</em> eliges compartir o exportar.</li>
+  <li>Exportar carreras como archivos GPX, hacer una copia de seguridad de tu base de datos o exportar un breve resumen para IA (una carrera o un mes), pero solo cuando <em>tú</em> eliges compartir o exportar.</li>
 </ul>
 
 <h2>Almacenamiento de datos</h2>
@@ -705,10 +712,11 @@
 <ul>
   <li><strong>Exportación GPX</strong> — compartir un archivo de carrera mediante la hoja de compartir de iOS (AirDrop, Mensajes, Archivos, etc.).</li>
   <li><strong>Exportación de base de datos SQLite</strong> — exportar un archivo de respaldo mediante la hoja de compartir de iOS.</li>
+  <li><strong>Exportación de texto para IA («Compartir con IA»)</strong> — un breve resumen de una carrera o de un mes, enviado mediante la hoja de compartir de iOS a la app que elijas. No contiene coordenadas de la ruta, solo los números y tu valoración subjetiva (opcional). Si lo pegas en un asistente en línea, el resumen sale de tu dispositivo y se aplica la política de privacidad de ese proveedor; un modelo local en tu dispositivo lo mantiene ahí.</li>
 </ul>
 
-<h2>Compras dentro de la app y suscripciones</h2>
-<p>RunningAir ofrece una suscripción de membresía opcional con renovación automática (<code>com.vega.running.member</code>, 0,99 $ / 3 meses, con una prueba gratuita de 2 semanas). Todo el procesamiento de pagos lo gestiona íntegramente Apple a través de la App Store. RunningAir <strong>no</strong> recibe, almacena ni procesa ninguna información de tarjetas de pago, datos de facturación ni credenciales de Apple ID. El estado de la suscripción se verifica localmente mediante StoreKit.</p>
+<h2>Compras dentro de la app</h2>
+<p>RunningAir ofrece una compra <strong>única</strong> opcional (4,99 $) que desbloquea el almacenamiento ilimitado de carreras. <strong>No</strong> es una suscripción: nada se renueva y no hay nada que cancelar. Todo el procesamiento de pagos lo gestiona íntegramente Apple a través de la App Store. RunningAir <strong>no</strong> recibe, almacena ni procesa ninguna información de tarjetas de pago, datos de facturación ni credenciales de Apple ID. El estado de la compra se verifica localmente mediante StoreKit.</p>
 
 <h2>Servicios de terceros</h2>
 <p>RunningAir <strong>no</strong> usa SDK analíticos de terceros, redes publicitarias, servicios de informes de fallos ni tecnologías de seguimiento. La Aplicación no contiene cookies, píxeles ni mecanismos de seguimiento similares.</p>
@@ -754,7 +762,7 @@
 <div id="pl" class="lang-block" lang="pl" style="display:none">
 
 <h1>Polityka prywatności</h1>
-<p class="effective">Data wejścia w życie: 21 września 2026 &nbsp;|&nbsp; Wersja 1.5</p>
+<p class="effective">Data wejścia w życie: 1 listopada 2026 &nbsp;|&nbsp; Wersja 1.7</p>
 
 <p>Niniejsza Polityka prywatności dotyczy aplikacji RunningAir na iOS ("Aplikacja"), prowadzonej przez BIN XIAO ("Usługodawca"). RunningAir to <strong>w pełni offline</strong> tracker GPS do biegania — <strong>nigdy</strong> nie przesyła Twoich danych do żadnego serwera, usługi w chmurze ani podmiotu trzeciego.</p>
 
@@ -765,7 +773,7 @@
   <li><strong>Metadane biegu</strong> — czas rozpoczęcia, zakończenia, całkowity dystans, czas ruchu i tempo, obliczone z danych GPS.</li>
   <li><strong>Kontekst treningowy</strong> — narastające obciążenie, częstotliwość i wskaźniki zmęczenia (np. dystans 7/28 dni, kolejne dni biegania) wyliczane na urządzeniu z Twoich biegów, aby poprawić porady pokazywane dla każdego biegu.</li>
   <li><strong>Opcjonalna ocena biegu</strong> — jeśli zdecydujesz się ocenić, jak czułeś się podczas biegu ("Jak się czułeś"), ten jeden subiektywny wybór jest przechowywany lokalnie na Twoim urządzeniu. Jest całkowicie opcjonalny i nigdy nie jest wymagany do korzystania z aplikacji.</li>
-  <li><strong>Status subskrypcji</strong> — flaga logiczna (członek / nieczłonek) przechowywana lokalnie w UserDefaults w celu odblokowania funkcji premium. Żadne informacje o płatnościach nie są przechowywane w aplikacji.</li>
+  <li><strong>Status członkowski</strong> — flaga logiczna (członek / nieczłonek) przechowywana lokalnie w UserDefaults, odblokowująca nieograniczone przechowywanie biegów (w wersji darmowej pozostaje do 8 ukończonych biegów). Żadne informacje o płatnościach nie są przechowywane w aplikacji.</li>
 </ul>
 
 <div class="note">
@@ -778,7 +786,7 @@
   <li>Wyświetlania na Twoim urządzeniu trasy biegu, dystansu, tempa i wysokości.</li>
   <li>Zapewnienia lokalnej analizy AI Twoich wzorców biegania (za pomocą Core ML — żadne dane nie opuszczają Twojego telefonu).</li>
   <li>Generowania porad treningowych uwzględniających zmęczenie na podstawie Twojej historii oraz wykorzystania opcjonalnej oceny "Jak się czułeś" wyłącznie jako lokalnego, osobistego punktu odniesienia.</li>
-  <li>Eksportowania biegów jako plików GPX lub tworzenia kopii zapasowej bazy danych, ale tylko wtedy, gdy <em>to Ty</em> zdecydujesz się udostępnić lub wyeksportować.</li>
+  <li>Eksportowania biegów jako plików GPX, tworzenia kopii zapasowej bazy danych lub eksportu krótkiego podsumowania dla AI (bieg lub miesiąc), ale tylko wtedy, gdy <em>to Ty</em> zdecydujesz się udostępnić lub wyeksportować.</li>
 </ul>
 
 <h2>Przechowywanie danych</h2>
@@ -794,10 +802,11 @@
 <ul>
   <li><strong>Eksport GPX</strong> — udostępnienie pliku biegu przez arkusz udostępniania iOS (AirDrop, Wiadomości, Pliki itp.).</li>
   <li><strong>Eksport bazy danych SQLite</strong> — wyeksportowanie pliku kopii zapasowej przez arkusz udostępniania iOS.</li>
+  <li><strong>Eksport tekstu dla AI („Udostępnij AI”)</strong> — krótkie podsumowanie jednego biegu lub miesiąca, wysyłane przez arkusz udostępniania iOS do wybranej aplikacji. Nie zawiera współrzędnych trasy, tylko liczby i Twoją opcjonalną ocenę samopoczucia. Jeśli wkleisz je do asystenta online, podsumowanie opuszcza urządzenie i obowiązuje polityka prywatności tego dostawcy; model lokalny działający na urządzeniu pozostawia je na miejscu.</li>
 </ul>
 
-<h2>Zakupy w aplikacji i subskrypcje</h2>
-<p>RunningAir oferuje opcjonalną subskrypcję członkowską z automatycznym odnawianiem (<code>com.vega.running.member</code>, 0,99 $ / 3 miesiące, z 2-tygodniowym okresem próbnym). Całe przetwarzanie płatności realizowane jest w całości przez Apple za pośrednictwem App Store. RunningAir <strong>nie</strong> otrzymuje, nie przechowuje ani nie przetwarza żadnych informacji o kartach płatniczych, danych rozliczeniowych ani danych logowania Apple ID. Status subskrypcji jest weryfikowany lokalnie przez StoreKit.</p>
+<h2>Zakupy w aplikacji</h2>
+<p>RunningAir oferuje opcjonalny <strong>jednorazowy</strong> zakup (4,99 $), który odblokowuje nieograniczone przechowywanie biegów. To <strong>nie</strong> jest subskrypcja — nic się nie odnawia i nie ma czego anulować. Całe przetwarzanie płatności realizowane jest w całości przez Apple za pośrednictwem App Store. RunningAir <strong>nie</strong> otrzymuje, nie przechowuje ani nie przetwarza żadnych informacji o kartach płatniczych, danych rozliczeniowych ani danych logowania Apple ID. Status zakupu jest weryfikowany lokalnie przez StoreKit.</p>
 
 <h2>Usługi podmiotów trzecich</h2>
 <p>RunningAir <strong>nie</strong> korzysta z pakietów analitycznych podmiotów trzecich, sieci reklamowych, usług raportowania awarii ani technologii śledzenia. Aplikacja nie zawiera plików cookie, pikseli ani podobnych mechanizmów śledzenia.</p>
@@ -843,7 +852,7 @@
 <div id="ko" class="lang-block" lang="ko" style="display:none">
 
 <h1>개인정보 처리방침</h1>
-<p class="effective">시행일: 2026년 9월 21일 &nbsp;|&nbsp; 버전 1.5</p>
+<p class="effective">시행일: 2026년 11월 1일 &nbsp;|&nbsp; 버전 1.7</p>
 
 <p>본 개인정보 처리방침은 BIN XIAO("서비스 제공자")가 운영하는 iOS용 RunningAir 앱("애플리케이션")에 적용됩니다. RunningAir는 <strong>완전히 오프라인</strong>으로 작동하는 GPS 러닝 트래커로, 귀하의 데이터를 어떤 서버, 클라우드 서비스 또는 제3자에게도 <strong>절대</strong> 전송하지 않습니다.</p>
 
@@ -854,7 +863,7 @@
   <li><strong>러닝 메타데이터</strong> — GPS 데이터에서 계산된 시작 시간, 종료 시간, 총 거리, 이동 시간 및 페이스입니다.</li>
   <li><strong>훈련 맥락</strong> — 각 러닝에 표시되는 조언을 개선하기 위해 귀하의 러닝에서 기기 내에서 파생된 누적 부하, 빈도 및 피로 지표(예: 7/28일 거리, 연속 러닝 일수)입니다.</li>
   <li><strong>선택적 러닝 평가</strong> — "어땠는지" 평가를 선택하면 해당 단일 주관적 선택이 기기에 로컬로 저장됩니다. 전적으로 선택 사항이며 앱을 사용하는 데 결코 필요하지 않습니다.</li>
-  <li><strong>구독 상태</strong> — 프리미엄 기능을 잠금 해제하기 위해 UserDefaults를 통해 로컬로 저장된 부울 플래그(멤버/비멤버)입니다. 앱에는 결제 정보가 저장되지 않습니다.</li>
+  <li><strong>멤버십 상태</strong> — 러닝 저장 개수 제한을 해제하기 위해 UserDefaults를 통해 로컬로 저장된 부울 플래그(멤버/비멤버)입니다. 무료 버전은 완료된 러닝을 최대 8개까지 보관합니다. 앱에는 결제 정보가 저장되지 않습니다.</li>
 </ul>
 
 <div class="note">
@@ -867,7 +876,7 @@
   <li>귀하의 기기에 러닝 경로, 거리, 페이스 및 고도를 표시합니다.</li>
   <li>러닝 패턴에 대한 기기 내 AI 분석을 제공합니다(Core ML 사용 — 어떤 데이터도 휴대전화 밖으로 나가지 않습니다).</li>
   <li>러닝 기록에서 피로를 고려한 훈련 조언을 생성하고, 선택적인 "느낀 점" 평가를 로컬 개인 참고 자료로만 사용합니다.</li>
-  <li>러닝을 GPX 파일로 내보내거나 데이터베이스를 백업하지만, <em>귀하가</em> 공유 또는 내보내기를 선택한 경우에만 수행합니다.</li>
+  <li>러닝을 GPX 파일로 내보내거나, 데이터베이스를 백업하거나, AI용 짧은 텍스트(한 번의 러닝 또는 한 달)를 내보내지만, <em>귀하가</em> 공유 또는 내보내기를 선택한 경우에만 수행합니다.</li>
 </ul>
 
 <h2>데이터 저장</h2>
@@ -883,10 +892,11 @@
 <ul>
   <li><strong>GPX 내보내기</strong> — iOS 공유 시트(AirDrop, 메시지, 파일 등)를 통해 러닝 파일을 공유합니다.</li>
   <li><strong>SQLite 데이터베이스 내보내기</strong> — iOS 공유 시트를 통해 백업 파일을 내보냅니다.</li>
+  <li><strong>AI 텍스트 내보내기(‘AI와 공유’)</strong> — 한 번의 러닝 또는 한 달 요약을 짧은 텍스트로 만들어 iOS 공유 시트로 선택한 앱에 보냅니다. 경로 좌표는 포함되지 않으며 숫자와 (선택 사항인) 체감 평가만 담깁니다. 온라인 AI에 붙여넣으면 요약이 기기를 떠나 해당 서비스의 개인정보 처리방침이 적용되고, 기기에서 실행되는 로컬 모델은 기기 안에 그대로 둡니다.</li>
 </ul>
 
-<h2>인앱 구매 및 구독</h2>
-<p>RunningAir는 선택적 자동 갱신 멤버십 구독(<code>com.vega.running.member</code>, 3개월에 0.99달러, 2주 무료 체험 포함)을 제공합니다. 모든 결제 처리는 App Store를 통해 Apple이 전적으로 처리합니다. RunningAir는 결제 카드 정보, 청구 세부 정보 또는 Apple ID 자격 증명을 <strong>수신, 저장 또는 처리하지 않습니다</strong>. 구독 상태는 StoreKit을 통해 로컬로 검증됩니다.</p>
+<h2>인앱 구매</h2>
+<p>RunningAir는 러닝 저장 개수 제한을 해제하는 선택적 <strong>1회 구매</strong>(4.99달러)를 제공합니다. 구독이 <strong>아니며</strong> 자동 갱신도, 해지할 항목도 없습니다. 모든 결제 처리는 App Store를 통해 Apple이 전적으로 처리합니다. RunningAir는 결제 카드 정보, 청구 세부 정보 또는 Apple ID 자격 증명을 <strong>수신, 저장 또는 처리하지 않습니다</strong>. 구매 상태는 StoreKit을 통해 로컬로 검증됩니다.</p>
 
 <h2>제3자 서비스</h2>
 <p>RunningAir는 제3자 분석 SDK, 광고 네트워크, 충돌 보고 서비스 또는 추적 기술을 <strong>사용하지 않습니다</strong>. 애플리케이션에는 쿠키, 픽셀 또는 유사한 추적 메커니즘이 포함되어 있지 않습니다.</p>
@@ -932,7 +942,7 @@
 <div id="zh-Hant" class="lang-block" lang="zh-Hant" style="display:none">
 
 <h1>隱私權政策</h1>
-<p class="effective">生效日期：2026 年 9 月 21 日 &nbsp;|&nbsp; 版本 1.5</p>
+<p class="effective">生效日期：2026 年 11 月 1 日 &nbsp;|&nbsp; 版本 1.7</p>
 
 <p>本隱私權政策適用於 BIN XIAO（「服務提供者」）所營運的 iOS 版 RunningAir 應用程式（「本應用程式」）。RunningAir 是一款<strong>完全離線</strong>的 GPS 跑步追蹤器——<strong>絕不</strong>將您的資料傳送至任何伺服器、雲端服務或第三方。</p>
 
@@ -943,7 +953,7 @@
   <li><strong>跑步中繼資料</strong> — 開始時間、結束時間、總距離、移動時間與配速，由 GPS 資料計算而得。</li>
   <li><strong>訓練情境</strong> — 由您自己的跑步在裝置端推導出的累積負荷、頻率與疲勞指標（例如 7/28 天距離、連續跑步天數），用以改善每次跑步顯示的建議。</li>
   <li><strong>可選的跑步感受評價</strong> — 若您選擇評價跑步感受（「體感」），該單一主觀選擇會儲存在您的裝置上。此功能完全可選，使用應用程式從不要求提供。</li>
-  <li><strong>訂閱狀態</strong> — 透過 UserDefaults 在本機儲存的布林旗標（會員／非會員），用以解鎖進階功能。應用程式不會儲存任何付款資訊。</li>
+  <li><strong>會員狀態</strong> — 透過 UserDefaults 在本機儲存的布林旗標（會員／非會員），用以解鎖不限次數的跑步記錄（免費版最多保留 8 次已完成跑步）。應用程式不會儲存任何付款資訊。</li>
 </ul>
 
 <div class="note">
@@ -956,7 +966,7 @@
   <li>在您的裝置上顯示跑步路線、距離、配速與海拔。</li>
   <li>提供您跑步模式的裝置端 AI 分析（使用 Core ML——資料不會離開您的手機）。</li>
   <li>根據您的跑步記錄產生考慮疲勞的訓練建議，並僅將您的可選「體感」評價作為本機個人參考。</li>
-  <li>匯出跑步為 GPX 檔案或備份資料庫，但僅在<em>您</em>選擇分享或匯出時。</li>
+  <li>把跑步匯出為 GPX、備份資料庫，或匯出單次／整月的 AI 短摘要，但僅在<em>您</em>選擇分享或匯出時。</li>
 </ul>
 
 <h2>資料儲存</h2>
@@ -972,10 +982,11 @@
 <ul>
   <li><strong>GPX 匯出</strong> — 透過 iOS 分享面板（AirDrop、訊息、檔案等）分享跑步檔案。</li>
   <li><strong>SQLite 資料庫匯出</strong> — 透過 iOS 分享面板匯出備份檔案。</li>
+  <li><strong>AI 文字匯出（「分享給 AI」）</strong> — 把一次跑步或一個月壓成一段短文字，透過 iOS 分享面板傳送到您選擇的應用程式。文字不含軌跡座標，只有數字與您（可選）的體感評價。若您貼到線上 AI 助理，這段摘要會離開您的裝置並適用該服務商的隱私政策；在裝置上執行的本地模型則不會。</li>
 </ul>
 
-<h2>應用程式內購買與訂閱</h2>
-<p>RunningAir 提供可選的自動續訂會員訂閱（<code>com.vega.running.member</code>，每 3 個月 0.99 美元，附 2 週免費試用）。所有付款處理完全由 Apple 透過 App Store 處理。RunningAir 不接收、儲存或處理任何付款卡資訊、帳單明細或 Apple ID 憑證。訂閱狀態透過 StoreKit 在本機驗證。</p>
+<h2>應用程式內購買</h2>
+<p>RunningAir 提供選用的<strong>一次性</strong>購買（4.99 美元），用以解鎖不限次數的跑步記錄。它<strong>不是</strong>訂閱——不會自動續訂，也沒有需要取消的項目。所有付款處理完全由 Apple 透過 App Store 完成。RunningAir <strong>不會</strong>接收、儲存或處理任何付款卡資訊、帳單明細或 Apple ID 憑證。購買狀態透過 StoreKit 在本機驗證。</p>
 
 <h2>第三方服務</h2>
 <p>RunningAir 不使用任何第三方分析 SDK、廣告網路、當機回報服務或追蹤技術。本應用程式不含 Cookie、像素或類似追蹤機制。</p>
@@ -1021,7 +1032,7 @@
 <div id="pt" class="lang-block" lang="pt" style="display:none">
 
 <h1>Política de Privacidade</h1>
-<p class="effective">Data de entrada em vigor: 21 de setembro de 2026 &nbsp;|&nbsp; Versão 1.5</p>
+<p class="effective">Data de entrada em vigor: 1 de novembro de 2026 &nbsp;|&nbsp; Versão 1.7</p>
 
 <p>Esta Política de Privacidade aplica-se à aplicação RunningAir para iOS («a Aplicação»), operada por BIN XIAO («o Fornecedor de Serviços»). A RunningAir é um rastreador de corrida GPS <strong>totalmente offline</strong> — <strong>nunca</strong> transmite os seus dados a qualquer servidor, serviço em nuvem ou terceiros.</p>
 
@@ -1032,7 +1043,7 @@
   <li><strong>Metadados da corrida</strong> — hora de início, hora de fim, distância total, tempo em movimento e ritmo, calculados a partir dos dados GPS.</li>
   <li><strong>Contexto de treino</strong> — carga contínua, frequência e indicadores de fadiga (por exemplo, distância a 7/28 dias, dias de corrida consecutivos) derivados no dispositivo a partir das suas próprias corridas para melhorar o conselho apresentado em cada corrida.</li>
   <li><strong>Avaliação opcional da corrida</strong> — se escolher avaliar como sentiu a corrida («Como se sentiu»), essa única escolha subjetiva é armazenada localmente no seu dispositivo. É totalmente opcional e nunca é necessária para utilizar a aplicação.</li>
-  <li><strong>Estado da subscrição</strong> — um sinal booleano (membro / não membro) armazenado localmente via UserDefaults para desbloquear funcionalidades premium. Nenhuma informação de pagamento é armazenada na aplicação.</li>
+  <li><strong>Estado de membro</strong> — um sinal booleano (membro / não membro) armazenado localmente via UserDefaults que desbloqueia armazenamento ilimitado de corridas (a versão gratuita guarda até 8 corridas concluídas). Nenhuma informação de pagamento é armazenada na aplicação.</li>
 </ul>
 
 <div class="note">
@@ -1045,7 +1056,7 @@
   <li>Apresentar o seu percurso, distância, ritmo e altitude no seu dispositivo.</li>
   <li>Fornecer análise de IA no dispositivo dos seus padrões de corrida (utilizando Core ML — nenhum dado sai do seu telemóvel).</li>
   <li>Gerar conselhos de treino com consciência da fadiga a partir do seu histórico de corridas, e utilizar a sua avaliação opcional «Como se sentiu» apenas como referência local e pessoal.</li>
-  <li>Exportar corridas como ficheiros GPX ou fazer cópia de segurança da sua base de dados, mas apenas quando <em>você</em> escolher partilhar ou exportar.</li>
+  <li>Exportar corridas como ficheiros GPX, fazer cópia de segurança da base de dados ou exportar um breve resumo para IA (uma corrida ou um mês), mas apenas quando <em>você</em> escolher partilhar ou exportar.</li>
 </ul>
 
 <h2>Armazenamento de dados</h2>
@@ -1061,10 +1072,11 @@
 <ul>
   <li><strong>Exportação de GPX</strong> — partilhar um ficheiro de corrida através do menu de partilha do iOS (AirDrop, Mensagens, Ficheiros, etc.).</li>
   <li><strong>Exportação da base de dados SQLite</strong> — exportar um ficheiro de segurança através do menu de partilha do iOS.</li>
+  <li><strong>Exportação de texto para IA («Partilhar com IA»)</strong> — um breve resumo de uma corrida ou de um mês, enviado através do menu de partilha do iOS para a aplicação que escolher. Não contém coordenadas do percurso, apenas os números e a sua avaliação subjetiva (opcional). Se o colar num assistente online, o resumo sai do dispositivo e aplica-se a política de privacidade desse fornecedor; um modelo local no dispositivo mantém-no aí.</li>
 </ul>
 
-<h2>Compras dentro da aplicação e subscrições</h2>
-<p>A RunningAir oferece uma subscrição de membros opcional com renovação automática (<code>com.vega.running.member</code>, 0,99 $ / 3 meses, com um período de experimentação gratuito de 2 semanas). Todo o processamento de pagamentos é tratado inteiramente pela Apple através da App Store. A RunningAir <strong>não</strong> recebe, armazena ou processa qualquer informação de cartão de pagamento, detalhes de faturação ou credenciais do Apple ID. O estado da subscrição é verificado localmente através de StoreKit.</p>
+<h2>Compras dentro da aplicação</h2>
+<p>A RunningAir oferece uma compra <strong>única</strong> opcional (4,99 $) que desbloqueia o armazenamento ilimitado de corridas. <strong>Não</strong> é uma subscrição — nada é renovado e não há nada para cancelar. Todo o processamento de pagamentos é tratado inteiramente pela Apple através da App Store. A RunningAir <strong>não</strong> recebe, armazena ou processa qualquer informação de cartão de pagamento, detalhes de faturação ou credenciais do Apple ID. O estado da compra é verificado localmente através do StoreKit.</p>
 
 <h2>Serviços de terceiros</h2>
 <p>A RunningAir <strong>não</strong> utiliza SDKs de análise de terceiros, redes de publicidade, serviços de relatórios de falhas ou tecnologias de rastreio. A Aplicação não contém cookies, pixels ou mecanismos de rastreio semelhantes.</p>
@@ -1110,7 +1122,7 @@
 <div id="tr" class="lang-block" lang="tr" style="display:none">
 
 <h1>Gizlilik Politikası</h1>
-<p class="effective">Yürürlük tarihi: 21 Eylül 2026 &nbsp;|&nbsp; Sürüm 1.5</p>
+<p class="effective">Yürürlük tarihi: 1 Kasım 2026 &nbsp;|&nbsp; Sürüm 1.7</p>
 
 <p>Bu Gizlilik Politikası, BIN XIAO («Hizmet Sağlayıcı») tarafından işletilen iOS için RunningAir uygulamasına («Uygulama») uygulanır. RunningAir <strong>tamamen çevrimdışı</strong> bir GPS koşu takip cihazıdır — verilerinizi <strong>asla</strong> herhangi bir sunucuya, bulut hizmetine veya üçüncü tarafa iletmez.</p>
 
@@ -1121,7 +1133,7 @@
   <li><strong>Koşu meta verileri</strong> — başlangıç saati, bitiş saati, toplam mesafe, hareket süresi ve tempo; GPS verilerinden hesaplanır.</li>
   <li><strong>Antrenman bağlamı</strong> — her koşuda gösterilen tavsiyeyi iyileştirmek amacıyla kendi koşularınızdan cihaz üzerinde türetilen kayan yük, sıklık ve yorgunluk göstergeleri (ör. 7/28 günlük mesafe, ardışık koşu günleri).</li>
   <li><strong>İsteğe bağlı koşu değerlendirmesi</strong> — bir koşuyu nasıl hissettiğinizi değerlendirmeyi seçerseniz («Nasıl hissettin»), bu tek öznel seçim cihazınızda yerel olarak saklanır. Tamamen isteğe bağlıdır ve uygulamayı kullanmak için asla gerekli değildir.</li>
-  <li><strong>Abonelik durumu</strong> — premium özellikleri açmak için UserDefaults aracılığıyla yerel olarak saklanan bir boole bayrağı (üye / üye değil). Uygulamada hiçbir ödeme bilgisi saklanmaz.</li>
+  <li><strong>Üyelik durumu</strong> — sınırsız koşu saklamayı açan, UserDefaults aracılığıyla yerel olarak saklanan bir boole bayrağı (üye / üye değil); ücretsiz sürümde en fazla 8 tamamlanmış koşu saklanır. Uygulamada hiçbir ödeme bilgisi saklanmaz.</li>
 </ul>
 
 <div class="note">
@@ -1134,7 +1146,7 @@
   <li>Koşu rotanızı, mesafenizi, temponuzu ve rakımınızı cihazınızda göstermek.</li>
   <li>Koşu düzeninizin cihaz üzerinde yapay zekâ analizini sağlamak (Core ML kullanılır — hiçbir veri telefonunuzdan çıkmaz).</li>
   <li>Kendi koşu geçmişinizden yorgunluk bilincine sahip antrenman tavsiyesi üretmek ve isteğe bağlı «Nasıl hissettin» değerlendirmenizi yalnızca yerel, kişisel bir referans olarak kullanmak.</li>
-  <li>Koşuları GPX dosyaları olarak dışa aktarmak veya veritabanınızı yedeklemek; ancak yalnızca <em>siz</em> paylaşmayı veya dışa aktarmayı seçtiğinizde.</li>
+  <li>Koşuları GPX dosyaları olarak dışa aktarmak, veritabanınızı yedeklemek veya AI için kısa bir metin özeti (bir koşu ya da bir ay) dışa aktarmak; ancak yalnızca <em>siz</em> paylaşmayı veya dışa aktarmayı seçtiğinizde.</li>
 </ul>
 
 <h2>Veri Saklama</h2>
@@ -1150,10 +1162,11 @@
 <ul>
   <li><strong>GPX dışa aktarma</strong> — iOS Paylaşım menüsü (AirDrop, Mesajlar, Dosyalar vb.) aracılığıyla bir koşu dosyasını paylaşmak.</li>
   <li><strong>SQLite veritabanı dışa aktarma</strong> — iOS Paylaşım menüsü aracılığıyla bir yedek dosyasını dışa aktarmak.</li>
+  <li><strong>AI metin dışa aktarma (“AI ile paylaş”)</strong> — tek bir koşunun veya bir ayın kısa metin özeti; iOS Paylaşım menüsüyle seçtiğin uygulamaya gönderilir. Rota koordinatı içermez, yalnızca sayılar ve isteğe bağlı his değerlendirmen bulunur. Çevrimiçi bir asistana yapıştırırsan özet cihazından çıkar ve o sağlayıcının gizlilik politikası geçerli olur; cihazında çalışan yerel bir model ise onu cihazda tutar.</li>
 </ul>
 
-<h2>Uygulama İçi Satın Almalar ve Abonelikler</h2>
-<p>RunningAir isteğe bağlı, otomatik yenilenen bir üyelik aboneliği sunar (<code>com.vega.running.member</code>, 3 ayda 0,99 $, 2 haftalık ücretsiz deneme ile). Tüm ödeme işlemleri tamamen Apple tarafından App Store üzerinden yürütülür. RunningAir herhangi bir ödeme kartı bilgisini, fatura ayrıntısını veya Apple Kimliği kimlik bilgisini <strong>almaz</strong>, saklamaz veya işlemez. Abonelik durumu StoreKit aracılığıyla yerel olarak doğrulanır.</p>
+<h2>Uygulama İçi Satın Almalar</h2>
+<p>RunningAir, sınırsız koşu saklamayı açan isteğe bağlı bir <strong>tek seferlik</strong> satın alma (4,99 $) sunar. Bu bir abonelik <strong>değildir</strong> — hiçbir şey yenilenmez ve iptal edilecek bir şey yoktur. Tüm ödeme işlemleri tamamen Apple tarafından App Store üzerinden yürütülür. RunningAir herhangi bir ödeme kartı bilgisini, fatura ayrıntısını veya Apple Kimliği kimlik bilgisini <strong>almaz</strong>, saklamaz veya işlemez. Satın alma durumu StoreKit aracılığıyla yerel olarak doğrulanır.</p>
 
 <h2>Üçüncü Taraf Hizmetleri</h2>
 <p>RunningAir herhangi bir üçüncü taraf analiz SDK'sı, reklam ağı, çökme raporlama hizmeti veya izleme teknolojisi <strong>kullanmaz</strong>. Uygulama hiçbir çerez, piksel veya benzeri izleme mekanizması içermez.</p>
